@@ -16,19 +16,20 @@
           <img class="navigation_page_logo" alt="Логотип Девайс." src="image/logo_device.svg" width="145" height="36">
         </a>
 
-        <!-- Первый список навигации -->
-        <ul class="navigation_list">
-          <li class="navigation_item">
-            <form class="search_form" action="https://echo.htmlacademy.ru/" method="post">
-              <label>
-                <input type="text" name="text_search" placeholder="Текст поиска">
-              </label>
-              <button type="submit">
-                Найти
-              </button>
-            </form>
-          </li>
+        <div class="navigation_container">
+          <ul class="navigation_list">
+            <li class="navigation_item">
+        <form class="search_form" action="https://echo.htmlacademy.ru/" method="post">
+          <label>
+            <input class="text_search" type="text" name="text_search" placeholder="Текст поиска">
+          </label>
+          <button class="button_search" type="submit">
+            Найти
+          </button>
+        </form>
+      </li>
 
+        <!-- Навигация -->
           <li class="navigation_item">
             <a href="#">
               Коля петухов
@@ -39,10 +40,7 @@
               Выйти
             </a>
           </li>
-        </ul>
 
-        <!-- Второй список навигации -->
-        <ul class="navigation_list">
           <li class="navigation_item">
             <a href="#">
               Сравнить
@@ -55,13 +53,15 @@
             </a>
           </li>
         </ul>
+      </div>
 
         <!-- Подменю -->
-        <ul>
+        <ul class="submenu_list">
           <li>
+            <span class="submenu_item">
             Каталог товаров
-
-            <ul>
+          </span>
+            <ul class="submenu_list_two">
               <li>
                 <a href="#">
                   Виртуальная реальность
@@ -95,19 +95,19 @@
             </ul>
           </li>
 
-          <li>
+          <li class="submenu_item">
             <a href="#">
               Доставка
             </a>
           </li>
 
-          <li>
+          <li class="submenu_item">
             <a href="#">
               Гарантия
             </a>
           </li>
 
-          <li>
+          <li class="submenu_item">
             <a href="#">
               Контакты
             </a>
@@ -129,9 +129,7 @@
         <ul class="breadcrumbs">
           <li class="breadcrumbs_item">
             <a class="breadcrumbs_item_link" href="#">
-              <span>
                 Главная
-              </span>
             </a>
           </li>
 
@@ -149,10 +147,14 @@
         </ul>
       </header>
 
+      <div class="flex_container">
       <section>
-        <h2>
+        <h2 class="visually_hidden">
           Фильтр:
         </h2>
+        <span class="select_sorting_title">
+          Фильтр:
+        </span>
         <form action="https://echo.htmlacademy.ru/" method="get">
           <!-- Цвет -->
           <fieldset class="catalog_filter">
@@ -223,7 +225,7 @@
         </form>
       </section>
 
-      <section>
+      <section class="container_sorting">
         <label class="select_sorting_title">
           Сортировка:
         </label>
@@ -239,63 +241,85 @@
           </option>
         </select>
 
+        <div class="background_container">
         <ul class="product_list">
           <li>
-            <a class="product-card-link" href="#">
+            <a class="product_card_link" href="#">
             <img class="selfie_stick_img" src="image/product_1.jpg" width="360" height="380" alt="Любительская селфи-палка.">
+            <br>
+            <div class="container_text_product">
             <b>
-              Любительская селфи-палка
+              Любительская
+              <br>
+              селфи-палка
             </b>
           </a>
-            <p>
+            <p class="description_price">
               500 ₽
             </p>
+          </div>
           </li>
 
           <li>
-            <a class="product-card-link" href="#">
+            <a class="product_card_link" href="#">
             <img class="profi_selfie_stick_img" src="image/product_2.jpg" width="360" height="380" alt="Профессиональная селфи-палка.">
+            <br>
+            <div class="container_text_product">
             <b>
-              Профессиональная селфи-палка
+              Профессиональная
+              <br>
+              селфи-палка
             </b>
           </a>
-            <p>
+            <p class="description_price">
               1 500 ₽
             </p>
+          </div>
           </li>
 
           <li>
-            <a class="product-card-link" href="#">
+            <a class="product_card_link" href="#">
             <img class="waterproof_selfie_stick_img" src="image/product_3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка.">
+            <br>
+            <div class="container_text_product">
             <b>
-              Непотопляемая селфи-палка
+              Непотопляемая
+              <br>
+              селфи-палка
             </b>
           </a>
-            <p>
+            <p class="description_price">
               2 500 ₽
             </p>
+          </div>
           </li>
 
           <li>
-            <a class="product-card-link" href="#">
+            <a class="product_card_link" href="#">
             <img class="follow_selfie_stick_img" src="image/product_4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной».">
+            <br>
+            <div class="container_text_product">
             <b>
-              Селфи-палка «Следуй за мной»
+              Селфи-палка «Следуй
+              <br>
+              за мной»
             </b>
           </a>
-            <p>
+            <p class="description_price">
               1 500 ₽
             </p>
+          </div>
           </li>
         </ul>
 
-        <button type="button">
+        <button class="button_catalog" type="button">
           Загрузить ещё
         </button>
 
+
         <ul class="pagination">
           <li class="pagination_item">
-            <a>
+            <a class="pagination-link pagination_button" href="#">
               <span>
                 Назад
               </span>
@@ -327,17 +351,19 @@
             </a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link" href="#">
+            <a class="pagination_button" href="#">
               <span>
                 Вперёд
               </span>
             </a>
           </li>
         </ul>
+      </div>
       </section>
+    </div>
     </main>
 
-    <footer>
+    <footer class="footer">
       <a href="#">
         <img class="navigation_page_logo" alt="Логотип Девайс." src="image/logo_device_footer.svg" width="145"
           height="36">
@@ -361,20 +387,32 @@
         </h2>
         <ul>
           <li>
-            <a href="#">
+            <a  class="footer_navigation_link" href="#">
               Доставка
             </a>
           </li>
           <li>
-            <a href="#">
+            <a  class="footer_navigation_link" href="#">
               Гарантия
             </a>
           </li>
           <li>
-            <a href="#">
+            <a  class="footer_navigation_link" href="#">
               Контакты
             </a>
           </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="visually_hidden">
+          Телефон
+        </h2>
+        <address>
+          <a  class="contacts_address" href="tel:+78128121212">
+            +7 812 812-12-12
+          </a>
+        </address>
       </section>
 
       <section class="footer_social">

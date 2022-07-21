@@ -16,6 +16,9 @@
           <img class="navigation_page_logo" alt="Логотип Девайс." src="image/logo_device.svg" width="145" height="36">
         </a>
 
+        <div class="navigation_container">
+        <ul class="navigation_list">
+          <li class="navigation_item">
             <form class="search_form" action="https://echo.htmlacademy.ru/" method="post">
               <label>
                 <input class="text_search" type="text" name="text_search" placeholder="Текст поиска">
@@ -24,9 +27,9 @@
                 Найти
               </button>
             </form>
+          </li>
 
             <!-- Навигация -->
-          <ul class="navigation_list">
           <li class="navigation_item">
             <a class="navigation_item_link" href="#">
               Войти
@@ -45,6 +48,7 @@
             </a>
           </li>
         </ul>
+      </div>
 
         <!-- Подменю -->
         <ul class="submenu_list">
@@ -111,19 +115,19 @@
       <h1 class="visually_hidden">
         Девайс
       </h1>
-      <section>
+      <section class="section_slider">
         <img class="slider_image" src="image/slider_1.png" alt="Фото квадрокоптера.">
-        <button type="slider_button">
+        <div>
+        <button class="slider_button" type="button">
           <span class="visually_hidden">Предыдущее фото</span>
         </button>
-        <button type="slider_button">
+        <button class="slider_button" type="button">
           <span class="visually_hidden">Следующее фото</span>
         </button>
+      </div>
 
         <div class="quadrocopter_slider">
-          <h2>Порхает как бабочка,
-            <br>
-             жалит как пчела!
+          <h2>Порхает как бабочка, жалит как пчела!
           </h2>
           <p class="description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную
             камеру.
@@ -147,13 +151,15 @@
         </div>
       </section>
 
-      <section>
+      <section class="section_submenu_products">
         <h2 class="visually_hidden">
           Подменю
         </h2>
         <ul class="submenu_products">
-          <li>
+          <li class="submenu_products_item">
+            <div  class="background_products">
             <img src="image/virtual_reality.svg" width="97" height="55" alt="Очки виртуальной реальности.">
+          </div>
             <a href="#">
               <br>
               Виртуальная
@@ -162,8 +168,10 @@
             </a>
           </li>
 
-          <li>
+          <li class="submenu_products_item">
+            <div  class="background_products">
             <img src="image/monopods.svg" width="86" height="117" alt="Моноподы для селфи.">
+          </div>
             <a href="#">
               <br>
               Моноподы
@@ -172,32 +180,40 @@
             </a>
           </li>
 
-          <li>
+          <li class="submenu_products_item">
+            <div  class="background_products">
             <img src="image/action_camera.svg" width="71" height="87" alt="Экшн-камеры.">
+          </div>
             <a href="#">
               <br>
               Экшн-камеры
             </a>
           </li>
 
-          <li>
+          <li class="submenu_products_item">
+            <div  class="background_products">
             <img src="image/fitness_bracelet.svg" width="108" height="65" alt="Фитнес-браслеты.">
+          </div>
             <a href="#">
               <br>
               Фитнес-браслеты
             </a>
           </li>
 
-          <li>
+          <li class="submenu_products_item">
+            <div  class="background_products">
             <img src="image/smart_watches.svg" width="56" height="98" alt="Умные часы.">
+          </div>
             <a href="#">
               <br>
               Умные часы
             </a>
           </li>
 
-          <li>
+          <li class="submenu_products_item">
+            <div  class="background_products">
             <img src="image/quadrocopters.svg" width="132" height="69" alt="Квадрокоптеры.">
+          </div>
             <a href="#">
               <br>
               Квадрокоптеры
@@ -208,13 +224,10 @@
 
       <section>
         <!-- Tab links -->
+        <div class="tab_container">
         <div class="tab">
           <button class="tab_links button">Доставка</button>
-        </div>
-        <div class="tab">
           <button class="tab_links button">Гарантия</button>
-        </div>
-        <div class="tab">
           <button class="tab_links button">Кредит</button>
         </div>
 
@@ -228,9 +241,12 @@
             мы неплохо заработаем, поднимая его на ваш этаж.
           </p>
         </div>
+      </div>
 
-        <div>
+        <div class="container_delivery">
+          <div class="background_delivery">
           <img src="image/delivery.svg" width="47" height="31" alt="Доставка.">
+        </div>
           <b class="description_delivery">
             Доставим редкий товар под заказ
           </b>
@@ -238,13 +254,17 @@
       </section>
 
       <!-- о нас -->
-      <section>
+      <div class="flex_info">
+      <section class="section_about_us">
         <h2>
           О нас
         </h2>
-        <p class="description">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
+        <p class="description">Огромный выбор гаджетов не оставит равнодушным
+          <br> гика, который есть в каждом из нас.
         </p>
-        <p class="description">Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:</p>
+        <p class="description">Мы можем доставить ваш товар в самые отдалённые
+          <br> уголки России транспортными компаниями:
+        </p>
         <ul>
           <li  class="transport_item">
             Меловые линии
@@ -292,9 +312,10 @@
           Напишите нам
         </a>
       </section>
+    </div>
 
-      <section>
-        <h2>
+      <section class="section_subscribe">
+        <h2 class="title_subscribe">
           Подпишитесь
           <br>на рассылку
         </h2>
@@ -305,7 +326,7 @@
           <br> спецпредложения и вот это вот всё.
         </p>
 
-        <form class="" action="https://echo.htmlacademy.ru/" method="post">
+        <form class="form_email" action="https://echo.htmlacademy.ru/" method="post">
           <label>
             <input class="input_email" type="email" name="email" placeholder="Ваш e-mail">
           </label>
