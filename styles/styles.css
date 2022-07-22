@@ -105,6 +105,7 @@ h3 {
   line-height: 21px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  border: none;
 }
 
 .submenu_list_two {
