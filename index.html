@@ -8,9 +8,8 @@
   </head>
 
   <body>
-
     <!-- Шапка -->
-    <header class="page_header">
+    <header class="page_header container">
       <nav class="navigation">
         <a href="#">
           <img class="navigation_page_logo" alt="Логотип Девайс." src="image/logo_device.svg" width="145" height="36">
@@ -31,19 +30,19 @@
 
             <!-- Навигация -->
           <li class="navigation_item">
-            <a class="navigation_item_link" href="#">
+            <a class="navigation_item_link icon_login" href="#">
               Войти
             </a>
           </li>
 
           <li class="navigation_item">
-            <a class="navigation_item_link" href="#">
+            <a class="navigation_item_link icon_compare" href="#">
               Сравнить
             </a>
           </li>
 
           <li class="navigation_item">
-            <button class="navigation_item_link" type="button">
+            <button class="navigation_item_link basket" type="button">
               Корзина
             </button>
           </li>
@@ -53,7 +52,7 @@
         <!-- Подменю -->
         <ul class="submenu_list">
           <li>
-            <button class="catalog_button type="button">
+            <button class="catalog_button" type="button">
             Каталог товаров
             </button>
             <ul class="submenu_list_two">
@@ -115,27 +114,27 @@
       <h1 class="visually_hidden">
         Девайс
       </h1>
-      <section class="section_slider">
+      <section class="section_slider container">
         <div>
-        <button class="slider_button" type="button">
+        <button class="slider_button_previous" type="button">
           <span class="visually_hidden">Предыдущее фото</span>
         </button>
-        <button class="slider_button" type="button">
+        <button class="slider_button_next" type="button">
           <span class="visually_hidden">Следующее фото</span>
         </button>
       </div>
 
-        <div class="quadrocopter_slide">
+        <div class="quadrocopter_slide slide">
           <img class="slider_image" src="image/slider_1.jpg" alt="Фото квадрокоптера.">
           <span class="number_slide">
             01
           </span>
-          <h2>Порхает как бабочка, жалит как пчела!
+          <h2 class="title_slide">Порхает как бабочка, жалит как пчела!
           </h2>
           <p class="description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную
             камеру.
           </p>
-          <a class="button" href="#">
+          <a class="button button_slider" href="#">
             Подробнее
           </a>
 
@@ -156,12 +155,12 @@
         </div>
       </section>
 
-      <div class="fitness_watch_slide">
+      <div class="fitness_watch_slide slide">
         <img class="slider_image" src="image/slider_2.jpg" alt="Фото квадрокоптера.">
         <span class="number_slide">
           02
         </span>
-        <h2>Худеем правильно!
+        <h2 class="title_slide">Худеем правильно!
         </h2>
         <p class="description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
         </p>
@@ -179,12 +178,12 @@
       </dl>
       </div>
 
-      <div class="monopods_slide">
+      <div class="monopods_slide slide">
         <img class="slider_image" src="image/slider_3.jpg" alt="Фото квадрокоптера.">
         <span class="number_slide">
           03
         </span>
-        <h2>Делай селфи, как Бен Стиллер!
+        <h2 class="title_slide">Делай селфи, как Бен Стиллер!
         </h2>
         <p class="description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.
         </p>
@@ -221,57 +220,69 @@
         </h2>
         <ul class="submenu_products">
           <li class="submenu_products_item">
-            <a class="submenu_products_link" href="#">
+            <a class="submenu_products_link virtual_reality" href="#">
               Виртуальная
                реальность
             </a>
           </li>
 
           <li class="submenu_products_item">
-            <a class="submenu_products_link" href="#">
+            <a class="submenu_products_link monopods" href="#">
               Моноподы
               для селфи
             </a>
           </li>
 
           <li class="submenu_products_item">
-            <a class="submenu_products_link" href="#">
+            <a class="submenu_products_link action_camera" href="#">
               Экшн-камеры
             </a>
           </li>
 
           <li class="submenu_products_item">
-            <a class="submenu_products_link" href="#">
+            <a class="submenu_products_link fitness_bracelet" href="#">
               Фитнес-браслеты
             </a>
           </li>
 
           <li class="submenu_products_item">
-            <a class="submenu_products_link" href="#">
+            <a class="submenu_products_link smart_watch" href="#">
               Умные часы
             </a>
           </li>
 
           <li class="submenu_products_item">
-            <a class="submenu_products_link" href="#">
+            <a class="submenu_products_link quadrocopters" href="#">
               Квадрокоптеры
             </a>
           </li>
         </ul>
       </section>
 
-      <section class="tab_container">
+
         <!-- Tab links -->
+        <section class="tab_container">
         <div class="tab">
-          <button class="tab_links button">Доставка</button>
-          <button class="tab_links button">Гарантия</button>
-          <button class="tab_links button">Кредит</button>
+          <button class="tab_links_delivery button">
+            Доставка
+          </button>
+          <br>
+          <button class="tab_links button">
+            Гарантия
+          </button>
+          <br>
+          <button class="tab_links button">
+            Кредит
+          </button>
         </div>
 
         <!-- Tab content -->
-        <div id="delivery" class="tab_content">
-          <h2>Доставка</h2>
-          <p class="description">Мы с удовольствием доставим ваш товар прямо
+        <div class="tab_content">
+          <h2 class="delivery_title">
+            Доставка
+          </h2>
+          <p class="description">
+            Мы с удовольствием доставим ваш товар прямо
             <br>
             к вашему подъезду совершенно бесплатно! Ведь
             <br>
@@ -368,7 +379,7 @@
             Подписаться
           </button>
         </form>
-        <p class="description">
+        <p class="description check_mark">
           Это бесплатно
         </p>
       </section>
