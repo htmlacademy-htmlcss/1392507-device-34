@@ -37,15 +37,15 @@
           </li>
 
           <li class="navigation_item">
-            <a href="#">
+            <a class="navigation_item_link" href="#">
               Сравнить
             </a>
           </li>
 
           <li class="navigation_item">
-            <a href="#">
+            <button class="navigation_item_link" type="button">
               Корзина
-            </a>
+            </button>
           </li>
         </ul>
       </div>
@@ -53,9 +53,9 @@
         <!-- Подменю -->
         <ul class="submenu_list">
           <li>
-            <span class="submenu_item">
+            <button class="submenu_item" type="button">
             Каталог товаров
-          </span>
+            </button>
             <ul class="submenu_list_two">
               <li>
                 <a href="#">
@@ -135,19 +135,21 @@
           <a class="button" href="#">
             Подробнее
           </a>
-          <br>
-          <b class="indicators">
+
+          <dl class="advantages_list">
+          <dd class="indicators">
             800 м
-          </b>
-          <p class="description">
+          </dd>
+          <dt class="description">
             Дальность полета
-          </p>
-          <b class="indicators">
+          </dt>
+          <dd class="indicators">
             50 м
-          </b>
-          <p class="description">
+          </dd>
+          <dt class="description">
             Радиус поражения
-          </p>
+          </dt>
+        </dl>
         </div>
       </section>
 
@@ -222,9 +224,8 @@
         </ul>
       </section>
 
-      <section>
+      <section class="tab_container">
         <!-- Tab links -->
-        <div class="tab_container">
         <div class="tab">
           <button class="tab_links button">Доставка</button>
           <button class="tab_links button">Гарантия</button>
@@ -241,17 +242,14 @@
             мы неплохо заработаем, поднимая его на ваш этаж.
           </p>
         </div>
-      </div>
-
-        <div class="container_delivery">
-          <div class="background_delivery">
-          <img src="image/delivery.svg" width="47" height="31" alt="Доставка.">
-        </div>
-          <b class="description_delivery">
-            Доставим редкий товар под заказ
-          </b>
-        </div>
       </section>
+
+        <section class="container_delivery">
+          <button class="button_delivery" type="button">
+            Доставим редкий товар под заказ
+          </button>
+        </section>
+
 
       <!-- о нас -->
       <div class="flex_info">
@@ -291,14 +289,14 @@
         <h3>
           Интернет-магазин «Девайс»
         </h3>
-        <address>
+
         <p class="description">
           Санкт-Петербург, набережная реки Карповки, 5, литера П.
         </p>
         <a href="tel:+78128121212">
           +7 812 812-12-12
         </a>
-      </address>
+
         <h3>
           Время работы
         </h3>
@@ -349,13 +347,12 @@
         <h2 class="visually_hidden">
           Местоположение
         </h2>
-        <address class="contacts_address">
-          <p>
+
+          <p class="contacts_address">
             Санкт-Петербург, набережная
             <br>
             реки Карповки, 5, литера П.
           </p>
-        </address>
       </section>
 
       <section>
