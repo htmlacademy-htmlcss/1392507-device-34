@@ -53,7 +53,7 @@
         <!-- Подменю -->
         <ul class="submenu_list">
           <li>
-            <button class="submenu_item" type="button">
+            <button class="catalog_button type="button">
             Каталог товаров
             </button>
             <ul class="submenu_list_two">
@@ -90,20 +90,20 @@
             </ul>
           </li>
 
-          <li class="submenu_item">
-            <a href="#">
+          <li>
+            <a class="submenu_item_link" href="#">
               Доставка
             </a>
           </li>
 
-          <li class="submenu_item">
-            <a href="#">
+          <li>
+            <a class="submenu_item_link" href="#">
               Гарантия
             </a>
           </li>
 
-          <li class="submenu_item">
-            <a href="#">
+          <li>
+            <a class="submenu_item_link" href="#">
               Контакты
             </a>
           </li>
@@ -116,7 +116,6 @@
         Девайс
       </h1>
       <section class="section_slider">
-        <img class="slider_image" src="image/slider_1.png" alt="Фото квадрокоптера.">
         <div>
         <button class="slider_button" type="button">
           <span class="visually_hidden">Предыдущее фото</span>
@@ -126,7 +125,11 @@
         </button>
       </div>
 
-        <div class="quadrocopter_slider">
+        <div class="quadrocopter_slide">
+          <img class="slider_image" src="image/slider_1.jpg" alt="Фото квадрокоптера.">
+          <span class="number_slide">
+            01
+          </span>
           <h2>Порхает как бабочка, жалит как пчела!
           </h2>
           <p class="description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную
@@ -153,71 +156,104 @@
         </div>
       </section>
 
-      <section class="section_submenu_products">
+      <div class="fitness_watch_slide">
+        <img class="slider_image" src="image/slider_2.jpg" alt="Фото квадрокоптера.">
+        <span class="number_slide">
+          02
+        </span>
+        <h2>Худеем правильно!
+        </h2>
+        <p class="description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
+        </p>
+        <a class="button" href="#">
+          Подробнее
+        </a>
+
+        <dl class="advantages_list">
+        <dd class="indicators">
+          48 часов
+        </dd>
+        <dt class="description">
+          Без подзарядки
+        </dt>
+      </dl>
+      </div>
+
+      <div class="monopods_slide">
+        <img class="slider_image" src="image/slider_3.jpg" alt="Фото квадрокоптера.">
+        <span class="number_slide">
+          03
+        </span>
+        <h2>Делай селфи, как Бен Стиллер!
+        </h2>
+        <p class="description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.
+        </p>
+        <a class="button" href="#">
+          Подробнее
+        </a>
+
+        <dl class="advantages_list">
+        <dd class="indicators">
+          8,5 м
+        </dd>
+        <dt class="description">
+          Длина палки
+        </dt>
+        <dd class="indicators">
+          5 кг
+        </dd>
+        <dt class="description">
+          Вес палки
+        </dt>
+        <dd class="indicators">
+          Карбон
+        </dd>
+        <dt class="description">
+          Материал
+        </dt>
+      </dl>
+      </div>
+    </section>
+
+      <section class="section_submenu_products container">
         <h2 class="visually_hidden">
           Подменю
         </h2>
         <ul class="submenu_products">
           <li class="submenu_products_item">
-            <div  class="background_products">
-            <img src="image/virtual_reality.svg" width="97" height="55" alt="Очки виртуальной реальности.">
-          </div>
-            <a href="#">
-              <br>
+            <a class="submenu_products_link" href="#">
               Виртуальная
-              <br>
                реальность
             </a>
           </li>
 
           <li class="submenu_products_item">
-            <div  class="background_products">
-            <img src="image/monopods.svg" width="86" height="117" alt="Моноподы для селфи.">
-          </div>
-            <a href="#">
-              <br>
+            <a class="submenu_products_link" href="#">
               Моноподы
-              <br>
               для селфи
             </a>
           </li>
 
           <li class="submenu_products_item">
-            <div  class="background_products">
-            <img src="image/action_camera.svg" width="71" height="87" alt="Экшн-камеры.">
-          </div>
-            <a href="#">
-              <br>
+            <a class="submenu_products_link" href="#">
               Экшн-камеры
             </a>
           </li>
 
           <li class="submenu_products_item">
-            <div  class="background_products">
-            <img src="image/fitness_bracelet.svg" width="108" height="65" alt="Фитнес-браслеты.">
-          </div>
-            <a href="#">
-              <br>
+            <a class="submenu_products_link" href="#">
               Фитнес-браслеты
             </a>
           </li>
 
           <li class="submenu_products_item">
-            <div  class="background_products">
-            <img src="image/smart_watches.svg" width="56" height="98" alt="Умные часы.">
-          </div>
-            <a href="#">
-              <br>
+            <a class="submenu_products_link" href="#">
               Умные часы
             </a>
           </li>
 
           <li class="submenu_products_item">
-            <div  class="background_products">
-            <img src="image/quadrocopters.svg" width="132" height="69" alt="Квадрокоптеры.">
-          </div>
-            <a href="#">
-              <br>
+            <a class="submenu_products_link" href="#">
               Квадрокоптеры
             </a>
           </li>
