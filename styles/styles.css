@@ -46,16 +46,12 @@ body {
   background-color: #FFFFFF;
 }
 
-ul {
-  list-style-type: none;
-}
-
 a {
   text-decoration: none;
   color: #000000;
 }
 
-h2 {
+.title_raleway {
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 800;
@@ -64,7 +60,7 @@ h2 {
   margin: 0;
 }
 
-h3 {
+.title_rubik {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 700;
@@ -120,6 +116,7 @@ h3 {
 
 .navigation_list {
   display: flex;
+  list-style-type: none;
 }
 
 .navigation_item_link {
@@ -184,6 +181,7 @@ h3 {
 
 /* Подменю шапки */
 .submenu_list {
+  list-style-type: none;
   display: flex;
 }
 
@@ -282,6 +280,7 @@ h3 {
 }
 
 .submenu_products {
+  list-style-type: none;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 40px;
@@ -354,6 +353,9 @@ h3 {
   position: relative;
 }
 
+.time_list{
+  list-style-type: none;
+}
 
 /* Описание */
 .description {
@@ -518,6 +520,14 @@ h3 {
 }
 
 /* Подвал */
+.footer_list{
+  list-style-type: none;
+}
+
+.social_list{
+  list-style-type: none;
+}
+
 .footer {
   width: 1440px;
   margin: 0 auto;
@@ -546,6 +556,7 @@ h3 {
 
 /* Хлебные крошки */
 .breadcrumbs {
+  list-style-type: none;
   display: flex;
 }
 
@@ -569,6 +580,7 @@ h3 {
 }
 
 .product_list {
+  list-style-type: none;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -604,6 +616,10 @@ h3 {
   font-size: 18px;
   line-height: 20px;
   letter-spacing: -0.02em;
+}
+
+.catalog_filter_list{
+  list-style-type: none;
 }
 
 /* Чекбоксы */
@@ -674,6 +690,7 @@ h3 {
 }
 
 .pagination {
+  list-style-type: none;
   display: flex;
   flex-wrap: wrap;
   width: 760px;
