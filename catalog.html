@@ -11,49 +11,34 @@
 
     <!-- Шапка -->
     <header class="page_header container">
-        <a href="#">
-          <img class="navigation_page_logo" alt="Логотип Девайс." src="image/logo_device.svg" width="145" height="36">
-        </a>
+      <a href="#">
+        <img class="navigation_page_logo" alt="Логотип Девайс." src="image/logo_device.svg" width="145" height="36">
+      </a>
 
-        <div class="navigation_container">
-              <form class="search_form" action="https://echo.htmlacademy.ru/" method="post">
-                <label>
-                  <input class="text_search" type="text" name="text_search" placeholder="Текст поиска">
-                </label>
-                <button class="button_search" type="submit">
-                  Найти
-                </button>
-              </form>
+      <form class="search_form" action="https://echo.htmlacademy.ru/" method="post">
+        <label>
+          <input class="text_search" type="text" name="text_search" placeholder="Текст поиска">
+        </label>
+        <button class="button_search" type="submit">
+          Найти
+        </button>
+      </form>
 
-            <!-- Навигация -->
-            <nav class="navigation">
-              <ul class="navigation_list">
-            <li class="navigation_item">
-              <a href="#">
-                Коля петухов
-              </a>
-            </li>
-            <li class="navigation_item_link">
-              <button class="navigation_item_link" type="button">
-                Выйти
-              </button>
-            </li>
+      <a href="#">
+        Коля петухов
+      </a>
+      <button class="navigation_item_link" type="button">
+        Выйти
+      </button>
+      <a href="#">
+        Сравнить
+      </a>
+      <button class="navigation_item_link" type="button">
+        Корзина
+      </button>
 
-            <li class="navigation_item">
-              <a href="#">
-                Сравнить
-              </a>
-            </li>
-
-            <li class="navigation_item">
-              <button class="navigation_item_link" type="button">
-                Корзина
-              </button>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Подменю -->
+      <!-- Навигация -->
+      <nav class="navigation">
         <ul class="submenu_list">
           <li>
             <button class="catalog_button" type="button">
@@ -147,12 +132,9 @@
 
       <div class="flex_container">
         <section>
-          <h2 class="visually_hidden">
+          <h2 class="select_sorting_title">
             Фильтр:
           </h2>
-          <span class="select_sorting_title">
-            Фильтр:
-          </span>
           <form action="https://echo.htmlacademy.ru/" method="get">
             <!-- Цвет -->
             <fieldset class="catalog_filter">
@@ -245,126 +227,126 @@
           <div class="background_container">
             <ul class="product_list">
               <li>
-                  <img class="selfie_stick_img" src="image/product_1.jpg" width="360" height="380"
-                    alt="Любительская селфи-палка.">
-                  <br>
-                  <div class="container_text_product">
-                    <a class="product_card_link" href="#">
+                <img class="selfie_stick_img" src="image/product_1.jpg" width="360" height="380"
+                  alt="Любительская селфи-палка.">
+                <br>
+                <div class="container_text_product">
+                  <a class="product_card_link" href="#">
                     <b>
                       Любительская
                       <br>
                       селфи-палка
                     </b>
+                  </a>
+                  <p class="description_price">
+                    500 ₽
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <img class="profi_selfie_stick_img" src="image/product_2.jpg" width="360" height="380"
+                  alt="Профессиональная селфи-палка.">
+                <br>
+                <div class="container_text_product">
+                  <a class="product_card_link" href="#">
+                    <b>
+                      Профессиональная
+                      <br>
+                      селфи-палка
+                    </b>
+                  </a>
+                  <p class="description_price">
+                    1 500 ₽
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <img class="waterproof_selfie_stick_img" src="image/product_3.jpg" width="360" height="380"
+                  alt="Непотопляемая селфи-палка.">
+                <br>
+                <div class="container_text_product">
+                  <a class="product_card_link" href="#">
+                    <b>
+                      Непотопляемая
+                      <br>
+                      селфи-палка
+                    </b>
+                  </a>
+                  <p class="description_price">
+                    2 500 ₽
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <img class="follow_selfie_stick_img" src="image/product_4.jpg" width="360" height="380"
+                  alt="Селфи-палка «Следуй за мной».">
+                <br>
+                <div class="container_text_product">
+                  <a class="product_card_link" href="#">
+                    <b>
+                      Селфи-палка «Следуй
+                      <br>
+                      за мной»
+                    </b>
+                  </a>
+                  <p class="description_price">
+                    1 500 ₽
+                  </p>
+                </div>
+              </li>
+            </ul>
+
+            <button class="button_catalog" type="button">
+              Загрузить ещё
+            </button>
+
+
+            <ul class="pagination">
+              <li class="pagination_item">
+                <a class="pagination_button pagination_button_last" href="#">
+                  <span>
+                    Назад
+                  </span>
                 </a>
-                <p class="description_price">
-                  500 ₽
-                </p>
+              </li>
+              <li class="pagination_item pagination_item_number">
+                <a class="pagination_link">
+                  1
+                </a>
+              </li>
+              <li class="pagination_item pagination_item_number ">
+                <a class="pagination_link" href="#">
+                  2
+                </a>
+              </li>
+              <li class="pagination_item pagination_item_number">
+                <a class="pagination_link" href="#">
+                  3
+                </a>
+              </li>
+              <li class="pagination_item pagination_item_number">
+                <a class="pagination_link" href="#">
+                  ...
+                </a>
+              </li>
+              <li class="pagination_item pagination_item_number">
+                <a class="pagination_link" href="#">
+                  15
+                </a>
+              </li>
+              <li class="pagination_item">
+                <a class="pagination_button pagination_button_next" href="#">
+                  <span>
+                    Вперёд
+                  </span>
+                </a>
+              </li>
+            </ul>
           </div>
-          </li>
-
-          <li>
-              <img class="profi_selfie_stick_img" src="image/product_2.jpg" width="360" height="380"
-                alt="Профессиональная селфи-палка.">
-              <br>
-              <div class="container_text_product">
-                <a class="product_card_link" href="#">
-                <b>
-                  Профессиональная
-                  <br>
-                  селфи-палка
-                </b>
-            </a>
-            <p class="description_price">
-              1 500 ₽
-            </p>
-      </div>
-      </li>
-
-      <li>
-          <img class="waterproof_selfie_stick_img" src="image/product_3.jpg" width="360" height="380"
-            alt="Непотопляемая селфи-палка.">
-          <br>
-          <div class="container_text_product">
-            <a class="product_card_link" href="#">
-            <b>
-              Непотопляемая
-              <br>
-              селфи-палка
-            </b>
-        </a>
-        <p class="description_price">
-          2 500 ₽
-        </p>
-        </div>
-      </li>
-
-      <li>
-          <img class="follow_selfie_stick_img" src="image/product_4.jpg" width="360" height="380"
-            alt="Селфи-палка «Следуй за мной».">
-          <br>
-          <div class="container_text_product">
-            <a class="product_card_link" href="#">
-            <b>
-              Селфи-палка «Следуй
-              <br>
-              за мной»
-            </b>
-        </a>
-        <p class="description_price">
-          1 500 ₽
-        </p>
-        </div>
-      </li>
-      </ul>
-
-      <button class="button_catalog" type="button">
-        Загрузить ещё
-      </button>
-
-
-      <ul class="pagination">
-        <li class="pagination_item">
-          <a class="pagination_button pagination_button_last" href="#">
-            <span>
-              Назад
-            </span>
-          </a>
-        </li>
-        <li class="pagination_item pagination_item_number">
-          <a class="pagination_link">
-            1
-          </a>
-        </li>
-        <li class="pagination_item pagination_item_number ">
-          <a class="pagination_link" href="#">
-            2
-          </a>
-        </li>
-        <li class="pagination_item pagination_item_number">
-          <a class="pagination_link" href="#">
-            3
-          </a>
-        </li>
-        <li class="pagination_item pagination_item_number">
-          <a class="pagination_link" href="#">
-            ...
-          </a>
-        </li>
-        <li class="pagination_item pagination_item_number">
-          <a class="pagination_link" href="#">
-            15
-          </a>
-        </li>
-        <li class="pagination_item">
-          <a class="pagination_button pagination_button_next" href="#">
-            <span>
-              Вперёд
-            </span>
-          </a>
-        </li>
-      </ul>
-      </div>
-      </section>
+        </section>
       </div>
     </main>
 
