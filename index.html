@@ -95,11 +95,12 @@
       </nav>
     </header>
 
-    <main>
+    <main class="main_container">
       <h1 class="visually_hidden">
         Девайс
       </h1>
       <section class="section_slider container">
+        <h2 class="visually_hidden">Слайдер с товарами</h2>
         <div>
           <button class="slider_button_previous" type="button">
             <span class="visually_hidden">Предыдущее фото</span>
@@ -109,14 +110,28 @@
           </button>
         </div>
 
+        <div class="pagination visually_hidden">
+          <button type="button">
+            <span class="visually_hidden">1</span>
+          </button>
+          <button type="button">
+            <span class="visually_hidden">2</span>
+          </button>
+          <button type="button">
+            <span class="visually_hidden">3</span>
+          </button>
+        </div>
+
         <div class="quadrocopter_slide slide">
           <img class="slider_image" src="image/slider_1.jpg" alt="Фото квадрокоптера.">
           <span class="number_slide">
             01
           </span>
-          <h2 class="title_raleway title_slide">Порхает как бабочка, жалит как пчела!
+          <h2 class="title_raleway title_slide">
+            Порхает как бабочка, жалит как пчела!
           </h2>
-          <p class="description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным
+          <p class="description">
+            Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным
             под стандартную
             камеру.
           </p>
@@ -125,18 +140,19 @@
           </a>
 
           <dl class="advantages_list">
-            <dd class="indicators">
-              800 м
-            </dd>
             <dt class="description">
               Дальность полета
             </dt>
             <dd class="indicators">
-              50 м
+              800 м
             </dd>
             <dt class="description">
               Радиус поражения
             </dt>
+            <dd class="indicators">
+              50 м
+            </dd>
+
           </dl>
         </div>
       </section>
@@ -146,9 +162,11 @@
         <span class="number_slide">
           02
         </span>
-        <h2 class="title_raleway title_slide">Худеем правильно!
+        <h2 class="title_raleway title_slide">
+          Худеем правильно!
         </h2>
-        <p class="description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать
+        <p class="description">
+          Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать
           диету.
         </p>
         <a class="button" href="#">
@@ -156,12 +174,12 @@
         </a>
 
         <dl class="advantages_list">
-          <dd class="indicators">
-            48 часов
-          </dd>
           <dt class="description">
             Без подзарядки
           </dt>
+          <dd class="indicators">
+            48 часов
+          </dd>
         </dl>
       </div>
 
@@ -180,31 +198,31 @@
         </a>
 
         <dl class="advantages_list">
-          <dd class="indicators">
-            8,5 м
-          </dd>
           <dt class="description">
             Длина палки
           </dt>
           <dd class="indicators">
-            5 кг
+            8,5 м
           </dd>
           <dt class="description">
             Вес палки
           </dt>
           <dd class="indicators">
-            Карбон
+            5 кг
           </dd>
           <dt class="description">
             Материал
           </dt>
+          <dd class="indicators">
+            Карбон
+          </dd>
         </dl>
       </div>
       </section>
 
       <section class="section_submenu_products container">
         <h2 class="visually_hidden">
-          Подменю
+          Категории товаров
         </h2>
         <ul class="submenu_products">
           <li class="submenu_products_item">
@@ -250,15 +268,18 @@
 
       <!-- Tab links -->
       <section class="tab_container">
+        <h2 class="visually_hidden">
+          Преимущества
+        </h2>
         <div class="tab">
           <button class="tab_links_delivery button">
             Доставка
           </button>
-          <br>
+
           <button class="tab_links button">
             Гарантия
           </button>
-          <br>
+
           <button class="tab_links button">
             Кредит
           </button>
@@ -363,16 +384,14 @@
         </p>
 
         <form class="form_email" action="https://echo.htmlacademy.ru/" method="post">
-          <label>
             <input class="input_email" type="email" name="email" placeholder="Ваш e-mail">
-          </label>
           <button class="button_subscribe" type="submit">
             Подписаться
           </button>
         </form>
-        <p class="description check_mark">
+        <span class="description check_mark">
           Это бесплатно
-        </p>
+        </span>
       </section>
     </main>
 
