@@ -16,14 +16,14 @@
       </a>
 
       <form class="search_form" action="https://echo.htmlacademy.ru/" method="post">
-        <label>
+        <label class="visually_hidden" for="text_search">Поиск по сайту.</label>>
           <input class="text_search" type="text" name="text_search" placeholder="Текст поиска">
-        </label>
         <button class="button_search" type="submit">
           Найти
         </button>
       </form>
 
+      <div class="user_bar_container">
       <a href="#">
         Коля петухов
       </a>
@@ -36,6 +36,7 @@
       <button class="navigation_item_link" type="button">
         Корзина
       </button>
+    </div>
 
       <!-- Навигация -->
       <nav class="navigation">
@@ -136,6 +137,38 @@
             Фильтр:
           </h2>
           <form action="https://echo.htmlacademy.ru/" method="get">
+            <!-- стоимость -->
+            <fieldset class="catalog_filter">
+              <legend class="catalog_filter_title">
+                Стоимость
+              </legend>
+              <div class="range">
+                <div class="range_scale">
+                  <div class="range_bar" style="left: 0; width: 119px">
+                    <button class="range_toggle toggle_min" type="button">
+                      <span class="visually_hidden">
+                        Изменить минимальную цену.
+                      </span>
+                    </button>
+                    <button class="range_toggle toggle_max" type="button">
+                      <span class="visually_hidden">
+                        Изменить максимальную цену.
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <div class="range_wrapper_inputs">
+                  <label class="catalog_filter_label range_input_from" style="left: 0">
+                    от
+                    <input class="range_input" type="number" value="0" name="min_price" />
+                  </label>
+                  <label class="catalog_filter_label range_input_to" style="left: 119px">
+                    до
+                    <input class="range_input" type="number" value="5000" name="max_price" />
+                  </label>
+                </div>
+              </div>
+            </fieldset>
             <!-- Цвет -->
             <fieldset class="catalog_filter">
               <legend class="catalog_filter_title">
@@ -144,31 +177,36 @@
               <ul class="catalog_filter_list">
                 <li class="catalog_filter_item">
                   <label class="control">
-                    <input type="checkbox" name="black" checked>Чёрный
+                    <input type="checkbox" value="black" checked>
+                    Чёрный
                   </label>
                 </li>
 
                 <li class="catalog_filter_item">
                   <label class="control">
-                    <input type="checkbox" name="white" checked>Белый
+                    <input type="checkbox" name="color" value="white" checked>
+                    Белый
                   </label>
                 </li>
 
                 <li class="catalog_filter_item">
                   <label class="control">
-                    <input type="checkbox" name="blue">Синий
+                    <input type="checkbox" name="color" value="blue">
+                    Синий
                   </label>
                 </li>
 
                 <li class="catalog_filter_item">
                   <label class="control">
-                    <input type="checkbox" name="red">Красный
+                    <input type="checkbox" name="color" value="red">
+                    Красный
                   </label>
                 </li>
 
                 <li class="catalog_filter_item">
                   <label class="control">
-                    <input type="checkbox" name="pink">Розовый
+                    <input type="checkbox" name="color" value="pink">
+                    Розовый
                   </label>
                 </li>
               </ul>
@@ -183,7 +221,8 @@
               <ul class="catalog_filter_list">
                 <li class="catalog_filter_item">
                   <label class="control">
-                    <input type="radio" name="bluetooth" value="yes" checked>Есть
+                    <input type="radio" name="bluetooth" value="yes" checked>
+                    Есть
                   </label>
                 </li>
 
@@ -197,21 +236,17 @@
             </fieldset>
 
             <!--кнопка-->
-            <div class="button">
+
               <button class="button" type="submit">
                 Показать
               </button>
-            </div>
           </form>
         </section>
 
         <section class="container_sorting">
-          <h2 class="visually_hidden">
-            Сортировка
-          </h2>
-          <label class="select_sorting_title">
+          <h2 class="select_sorting_title">
             Сортировка:
-          </label>
+          </h2>
           <select class="select_sorting">
             <option value="popular">
               Популярные
@@ -224,23 +259,35 @@
             </option>
           </select>
 
+          <div class="card_toggle">
+            <a class="card_toggle_sorting card_toggle_up" href="#">
+              <span class="visually_hidden">
+                Показать от меньшего к большему
+              </span>
+            </a>
+            <a class="card_toggle_sorting card_toggle_down" href="#">
+              <span class="visually_hidden">
+                Показать от большего к меньшему
+              </span>
+            </a>
+          </div>
+
           <div class="background_container">
             <ul class="product_list">
               <li>
                 <img class="selfie_stick_img" src="image/product_1.jpg" width="360" height="380"
                   alt="Любительская селфи-палка.">
-                <br>
                 <div class="container_text_product">
                   <a class="product_card_link" href="#">
-                    <b>
+                    <h3 class="product_title">
                       Любительская
                       <br>
                       селфи-палка
-                    </b>
+                    </h3>
                   </a>
-                  <p class="description_price">
+                  <span class="description_price">
                     500 ₽
-                  </p>
+                  </span>
                 </div>
               </li>
 
@@ -250,51 +297,49 @@
                 <br>
                 <div class="container_text_product">
                   <a class="product_card_link" href="#">
-                    <b>
+                    <h3 class="product_title">
                       Профессиональная
                       <br>
                       селфи-палка
-                    </b>
+                    </h3>
                   </a>
-                  <p class="description_price">
+                  <span class="description_price">
                     1 500 ₽
-                  </p>
+                  </span>
                 </div>
               </li>
 
               <li>
                 <img class="waterproof_selfie_stick_img" src="image/product_3.jpg" width="360" height="380"
                   alt="Непотопляемая селфи-палка.">
-                <br>
                 <div class="container_text_product">
                   <a class="product_card_link" href="#">
-                    <b>
+                    <h3 class="product_title">
                       Непотопляемая
                       <br>
                       селфи-палка
-                    </b>
+                    </h3>
                   </a>
-                  <p class="description_price">
+                  <span class="description_price">
                     2 500 ₽
-                  </p>
+                  </span>
                 </div>
               </li>
 
               <li>
                 <img class="follow_selfie_stick_img" src="image/product_4.jpg" width="360" height="380"
                   alt="Селфи-палка «Следуй за мной».">
-                <br>
                 <div class="container_text_product">
                   <a class="product_card_link" href="#">
-                    <b>
+                    <h3 class="product_title">
                       Селфи-палка «Следуй
                       <br>
                       за мной»
-                    </b>
+                    </h3>
                   </a>
-                  <p class="description_price">
+                  <span class="description_price">
                     1 500 ₽
-                  </p>
+                  </span>
                 </div>
               </li>
             </ul>
@@ -304,14 +349,10 @@
             </button>
 
 
-            <ul class="pagination">
-              <li class="pagination_item">
                 <a class="pagination_button pagination_button_last" href="#">
-                  <span>
                     Назад
-                  </span>
                 </a>
-              </li>
+              <ul class="pagination">
               <li class="pagination_item pagination_item_number">
                 <a class="pagination_link">
                   1
@@ -328,23 +369,20 @@
                 </a>
               </li>
               <li class="pagination_item pagination_item_number">
-                <a class="pagination_link" href="#">
+                <span class="pagination_link">
                   ...
-                </a>
+                </span>
               </li>
               <li class="pagination_item pagination_item_number">
                 <a class="pagination_link" href="#">
                   15
                 </a>
               </li>
-              <li class="pagination_item">
-                <a class="pagination_button pagination_button_next" href="#">
-                  <span>
-                    Вперёд
-                  </span>
-                </a>
-              </li>
             </ul>
+
+                <a class="pagination_button pagination_button_next" href="#">
+                    Вперёд
+                </a>
           </div>
         </section>
       </div>
