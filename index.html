@@ -14,8 +14,11 @@
         <img class="navigation_page_logo" alt="Логотип Девайс." src="image/logo_device.svg" width="145" height="36">
       </a>
 
+      <div class="header_user_bar">
       <form class="search_form" action="https://echo.htmlacademy.ru/" method="post">
-        <label class="visually_hidden" for="text_search">Поиск по сайту.</label>>
+        <label class="visually_hidden" for="text_search">
+          Поиск по сайту.
+        </label>
           <input class="text_search" type="text" name="text_search" placeholder="Текст поиска">
         </label>
         <button class="button_search" type="submit">
@@ -23,6 +26,7 @@
         </button>
       </form>
 
+      <div class="user_bar_container">
       <a class="navigation_item_link icon_login" href="#">
         Войти
       </a>
@@ -32,6 +36,8 @@
       <button class="navigation_item_link basket" type="button">
         Корзина
       </button>
+    </div>
+  </div>
 
       <!-- Навигация -->
       <nav class="navigation">
@@ -74,19 +80,19 @@
             </ul>
           </li>
 
-          <li>
+          <li class="submenu_item">
             <a class="submenu_item_link" href="#">
               Доставка
             </a>
           </li>
 
-          <li>
+          <li class="submenu_item">
             <a class="submenu_item_link" href="#">
               Гарантия
             </a>
           </li>
 
-          <li>
+          <li class="submenu_item">
             <a class="submenu_item_link" href="#">
               Контакты
             </a>
@@ -122,15 +128,16 @@
           </button>
         </div>
 
-        <div class="quadrocopter_slide slide">
+        <div class="drone_slide slide">
           <img class="slider_image" src="image/slider_1.jpg" alt="Фото квадрокоптера.">
+          <div class="flex_slide_container">
           <span class="number_slide">
             01
           </span>
           <h2 class="title_raleway title_slide">
             Порхает как бабочка, жалит как пчела!
           </h2>
-          <p class="description">
+          <p class="description description_slide">
             Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным
             под стандартную
             камеру.
@@ -140,32 +147,37 @@
           </a>
 
           <dl class="advantages_list">
+            <div class="slider_features_item">
             <dt class="description">
               Дальность полета
             </dt>
             <dd class="indicators">
               800 м
             </dd>
+          </div>
+          <div class="slider_features_item">
             <dt class="description">
               Радиус поражения
             </dt>
             <dd class="indicators">
               50 м
             </dd>
-
+          </div>
           </dl>
+        </div>
         </div>
       </section>
 
       <div class="fitness_watch_slide slide">
         <img class="slider_image" src="image/slider_2.jpg" alt="Фото квадрокоптера.">
+        <div class="grid_container">
         <span class="number_slide">
           02
         </span>
         <h2 class="title_raleway title_slide">
           Худеем правильно!
         </h2>
-        <p class="description">
+        <p class="description description_slide">
           Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать
           диету.
         </p>
@@ -174,23 +186,27 @@
         </a>
 
         <dl class="advantages_list">
+          <div class="slider_features_item">
           <dt class="description">
             Без подзарядки
           </dt>
           <dd class="indicators">
             48 часов
           </dd>
+          </div>
         </dl>
+      </div>
       </div>
 
       <div class="monopods_slide slide">
         <img class="slider_image" src="image/slider_3.jpg" alt="Фото квадрокоптера.">
+        <div class="grid_container">
         <span class="number_slide">
           03
         </span>
         <h2 class="title_raleway title_slide">Делай селфи, как Бен Стиллер!
         </h2>
-        <p class="description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров
+        <p class="description description_slide">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров
           длиной и весом всего 5 кг.
         </p>
         <a class="button" href="#">
@@ -198,25 +214,32 @@
         </a>
 
         <dl class="advantages_list">
+          <div class="slider_features_item">
           <dt class="description">
             Длина палки
           </dt>
           <dd class="indicators">
             8,5 м
           </dd>
+          </div>
+          <div class="slider_features_item">
           <dt class="description">
             Вес палки
           </dt>
           <dd class="indicators">
             5 кг
           </dd>
+          </div>
+          <div class="slider_features_item">
           <dt class="description">
             Материал
           </dt>
           <dd class="indicators">
             Карбон
           </dd>
+          </div>
         </dl>
+        </div>
       </div>
       </section>
 
@@ -258,7 +281,7 @@
           </li>
 
           <li class="submenu_products_item">
-            <a class="submenu_products_link quadrocopters" href="#">
+            <a class="submenu_products_link drones" href="#">
               Квадрокоптеры
             </a>
           </li>
@@ -313,16 +336,16 @@
       <!-- о нас -->
       <div class="flex_info">
         <section class="section_about_us">
-          <h2 class="title_raleway">
+          <h2 class="title_raleway title_about_us">
             О нас
           </h2>
-          <p class="description">Огромный выбор гаджетов не оставит равнодушным
+          <p class="description description_about_us">Огромный выбор гаджетов не оставит равнодушным
             <br> гика, который есть в каждом из нас.
           </p>
-          <p class="description">Мы можем доставить ваш товар в самые отдалённые
+          <p class="description description_about_us">Мы можем доставить ваш товар в самые отдалённые
             <br> уголки России транспортными компаниями:
           </p>
-          <ul>
+          <ul class="about_us_list">
             <li class="transport_item">
               Меловые линии
             </li>
@@ -339,13 +362,13 @@
         </section>
 
         <section>
-          <h2 class="title_raleway">
+          <h2 class="title_raleway title_about_us">
             Контакты
           </h2>
-          <p class="description">Вы можете забрать товар сами, заехав в наш офис.
+          <p class="description description_about_us">Вы можете забрать товар сами, заехав в наш офис.
             <br>Заодно сможете проверить работоспособность покупки.
           </p>
-          <h3 class="title_rubik">
+          <h3 class="title_rubik title_contacts">
             Интернет-магазин «Девайс»
           </h3>
 
@@ -356,10 +379,10 @@
             +7 812 812-12-12
           </a>
 
-          <h3 class="title_rubik">
+          <h3 class="title_rubik title_contacts">
             Время работы
           </h3>
-          <ul class="time_list">
+          <ul class="about_us_list">
             <li class="description">пн—пт: с 10:00 до 22:00
             </li>
             <li class="description">сб—вс: с 10:00 до 19:00
@@ -376,7 +399,7 @@
           Подпишитесь
           <br>на рассылку
         </h2>
-        <p class="description">
+        <p class="description description_subscribe">
           Еженедельный дайджест с обзорами новинок,
           <br>
           длительными тест-драйвами, распаковками, а также акции,

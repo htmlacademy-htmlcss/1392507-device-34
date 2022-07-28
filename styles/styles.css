@@ -127,6 +127,29 @@ a {
 
 }
 
+.header_user_bar{
+  display: flex;
+  width: 1040px;
+  align-items: center;
+}
+
+.navigation{
+  display: flex;
+  width: 1040px;
+}
+
+.navigation_item_link{
+  min-width: 105px;
+  padding-left: 26px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 0;
+}
+
+.icon_login{
+  padding-right: 150px;
+}
+
 .navigation_list {
   display: flex;
   list-style-type: none;
@@ -198,6 +221,7 @@ a {
 }
 
 .submenu_item_link {
+  min-width: 130px;
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 800;
@@ -205,6 +229,10 @@ a {
   line-height: 21px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+}
+
+.submenu_item:not(:first-child){
+  margin-left: 45px;
 }
 
 .catalog_button {
@@ -241,10 +269,39 @@ a {
 }
 
 /* Слайдер */
+.slide {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+gap: 40px;
+  }
+
 
 .title_slide {
   max-width: 545px;
+  margin: 0;
+  margin-bottom: 30px;
 }
+
+.description_slide{
+  max-width: 560px;
+  margin-bottom: 50px;
+
+}
+
+.flex_slide_container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.button_slider{
+  margin-right: 264px;
+}
+
+.advantages_list{
+  margin-top: 50px;
+  display: flex;
+}
+
 
 .slider_button_previous {
   width: 20px;
@@ -338,7 +395,7 @@ a {
   background-position: center;
 }
 
-.quadrocopters::before {
+.drones::before {
   background-image: url("../image/quadrocopters.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -363,19 +420,17 @@ a {
   padding-top: 193px;
 }
 
-.time_list {
-  list-style-type: none;
-}
-
 /* Описание */
 .description {
   max-width: 560px;
   color: #444444;
+margin: 0;
 }
 
 .container_delivery {
-  margin: 0 auto;
   width: 1160px;
+  margin: 0 auto;
+  padding: 70px 0 70px 0 ;
   position: relative;
 }
 
@@ -404,6 +459,10 @@ a {
   font-size: 18px;
   line-height: 20px;
   letter-spacing: -0.02em;
+}
+
+.transport_item:not(:last-child){
+  margin-bottom: 18px;
 }
 
 .tab_container {
@@ -454,10 +513,34 @@ a {
 
 /* О нас */
 .flex_info {
-  display: flex;
-  justify-content: space-between;
-  width: 1160px;
-  margin: 0 auto;
+    display: grid;
+    grid-template-columns: 520px 532px;
+    grid-template-rows: 1fr;
+    gap: 108px;
+    width: 1160px;
+margin: 0 auto;
+padding: 0 0 70px 0;
+}
+
+.title_about_us{
+  margin: 48px 0 48px 0;
+}
+
+.description_about_us{
+  margin-bottom: 30px;
+}
+
+.title_contacts{
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.about_us_list {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  list-style-type: none;
 }
 
 /* Подписаться на рассылку */
@@ -470,6 +553,21 @@ a {
   width: 1440px;
   margin: 0 auto;
   position: relative;
+  padding: 64px 140px 56px 146px;
+}
+
+.title_subscribe{
+  margin: 0 252px 144px 0
+}
+
+.description_subscribe{
+  margin-top: 10px;
+}
+
+.check_mark{
+  min-width: 160px;
+  margin-left: 188px;
+  padding: 13px 0 13px 0;
 }
 
 /* Форма */
