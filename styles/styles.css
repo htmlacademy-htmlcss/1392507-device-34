@@ -141,16 +141,15 @@ a {
   align-items: center;
 }
 
-.navigation_item_link{
-  min-width: 105px;
-  padding-left: 26px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-right: 0;
+.user_bar_container{
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
 }
 
 .icon_login{
-  padding-right: 150px;
+  width: 105px;
+  margin: 0 auto;
 }
 
 .navigation_list {
@@ -159,16 +158,23 @@ a {
 }
 
 .navigation_item_link {
+  display: inline-block;
+  width: 105px;
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
   padding: 0;
+  padding-left: 28px;
   border: none;
   background-color: #FFE17F;
   margin: 0;
   position: relative;
+}
+
+*::before, *::after {
+  box-sizing: border-box;
 }
 
 .icon_login::before {
@@ -179,6 +185,8 @@ a {
   background-image: url("../image/login.svg");
   background-repeat: no-repeat;
   background-position: center;
+left:0;
+top: 10px;
 }
 
 .icon_compare::before {
@@ -189,6 +197,13 @@ a {
   background-image: url("../image/compare.svg");
   background-repeat: no-repeat;
   background-position: center;
+  left:0;
+top: 10px;
+}
+
+.basket{
+  padding: 0;
+  padding-left: 14px;
 }
 
 .basket::before {
@@ -199,10 +214,13 @@ a {
   background-image: url("../image/basket.svg");
   background-repeat: no-repeat;
   background-position: center;
+  left:0;
+top: 10px;
 }
 
 .search_form {
   display: flex;
+  margin-right: 26px;
 }
 
 .text_search {
@@ -612,6 +630,7 @@ padding: 0 0 70px 0;
 .footer_list {
   display: flex;
   list-style-type: none;
+  margin: 0;
 }
 
 .social_list {
@@ -626,6 +645,7 @@ padding: 0 0 70px 0;
 }
 
 .contacts_address {
+  margin: 0;
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
@@ -635,6 +655,9 @@ padding: 0 0 70px 0;
 }
 
 .footer_navigation_link {
+  display: flex;
+  flex-wrap: wrap;
+  width: 130px;
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 800;
@@ -643,6 +666,12 @@ padding: 0 0 70px 0;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #FFFFFF;
+  margin-right: 35px;
+  padding: 0;
+}
+
+.footer_navigation_link:not(:last-child){
+
 }
 
 /* Хлебные крошки */
