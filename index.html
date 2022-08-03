@@ -114,61 +114,62 @@
       <h1 class="visually_hidden">
         Девайс
       </h1>
-      <section class="section_slider container">
+      <section class="slider container">
         <h2 class="visually_hidden">Слайдер с товарами</h2>
-        <div class="slider_button">
-          <button class="slider_button_previous" type="button">
+        <div class="slider_controls">
+          <button class="slider_button button_previous" type="button">
             <span class="visually_hidden">Предыдущее фото</span>
           </button>
-          <button class="slider_button_next" type="button">
+          <button class="slider_button button_next" type="button">
             <span class="visually_hidden">Следующее фото</span>
           </button>
         </div>
 
-        <div class="pagination visually_hidden">
-          <button type="button">
+        <div class="slider_pagination">
+          <button class="slides_radio is_active " type="button">
             <span class="visually_hidden">1</span>
           </button>
-          <button type="button">
+          <button class="slides_radio" type="button">
             <span class="visually_hidden">2</span>
           </button>
-          <button type="button">
+          <button class="slides_radio" type="button">
             <span class="visually_hidden">3</span>
           </button>
         </div>
 
-        <div class="drone_slide slide">
+        <div class="slider_item is_active">
           <img class="slider_image" src="image/slider_1.jpg" alt="Фото квадрокоптера.">
-          <div class="flex_slide_container">
+          <div class="slider_desc_wrapper">
             <span class="number_slide">
               01
             </span>
-            <h3 class="title">
-              Порхает как бабочка, жалит как пчела!
+            <h3 class="title slogan_slider">
+              Порхает как бабочка,
+              жалит как пчела!
             </h3>
-            <p class="description description_slide">
+            <p class="description_slide">
               Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным
               под стандартную
               камеру.
             </p>
-            <a class="button button_slider" href="#">
+            <a class="button button_about" href="#">
               Подробнее
             </a>
 
             <dl class="advantages_list">
-              <div class="slider_features_item">
-                <dt class="description">
+              <div class="slider_advantages_item">
+                <dt class="slider_advantages_name">
                   Дальность полета
                 </dt>
-                <dd class="indicators">
+                <dd class="slider_advantages_value">
                   800 м
                 </dd>
               </div>
-              <div class="slider_features_item">
-                <dt class="description">
+              <div class="slider_advantages_item">
+                <dt class="slider_advantages_name">
                   Радиус поражения
                 </dt>
-                <dd class="indicators">
+                <dd class="slider_advantages_value">
                   50 м
                 </dd>
               </div>
@@ -176,29 +177,29 @@
           </div>
         </div>
 
-      <div class="fitness_watch_slide slide">
+      <div class="slider_item">
         <img class="slider_image" src="image/slider_2.jpg" alt="Фото квадрокоптера.">
-        <div class="grid_container">
+        <div class="slider_desc_wrapper">
           <span class="number_slide">
             02
           </span>
-          <h3 class="title">
+          <h3 class="title slogan_slider">
             Худеем правильно!
           </h3>
-          <p class="description description_slide">
+          <p class="description_slide">
             Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать
             диету.
           </p>
-          <a class="button" href="#">
+          <a class="button button_about " href="#">
             Подробнее
           </a>
 
           <dl class="advantages_list">
-            <div class="slider_features_item">
-              <dt class="description">
+            <div class="slider_advantages_item ">
+              <dt class="slider_advantages_name">
                 Без подзарядки
               </dt>
-              <dd class="indicators">
+              <dd class="slider_advantages_value">
                 48 часов
               </dd>
             </div>
@@ -206,44 +207,45 @@
         </div>
       </div>
 
-      <div class="monopods_slide slide">
+      <div class="slider_item">
         <img class="slider_image" src="image/slider_3.jpg" alt="Фото квадрокоптера.">
-        <div class="grid_container">
+        <div class="slider_desc_wrapper">
           <span class="number_slide">
             03
           </span>
-          <h3 class="title">Делай селфи, как Бен Стиллер!
+          <h3 class="title slogan_slider">
+            Делай селфи, как Бен Стиллер!
           </h3>
-          <p class="description description_slide">Самая длинная палка для селфи доступна в нашем магазине. Восемь
+          <p class="description_slide">Самая длинная палка для селфи доступна в нашем магазине. Восемь
             (Восемь, Карл!) метров
             длиной и весом всего 5 кг.
           </p>
-          <a class="button" href="#">
+          <a class="button button_about " href="#">
             Подробнее
           </a>
 
           <dl class="advantages_list">
-            <div class="slider_features_item">
-              <dt class="description">
+            <div class="slider_advantages_item">
+              <dt class="slider_advantages_name">
                 Длина палки
               </dt>
-              <dd class="indicators">
+              <dd class="slider_advantages_value">
                 8,5 м
               </dd>
             </div>
             <div class="slider_features_item">
-              <dt class="description">
+              <dt class="slider_advantages_name">
                 Вес палки
               </dt>
-              <dd class="indicators">
+              <dd class="slider_advantages_value">
                 5 кг
               </dd>
             </div>
             <div class="slider_features_item">
-              <dt class="description">
+              <dt class="slider_advantages_name">
                 Материал
               </dt>
-              <dd class="indicators">
+              <dd class="slider_advantages_value">
                 Карбон
               </dd>
             </div>
@@ -259,39 +261,54 @@
         <ul class="submenu_products">
           <li class="submenu_products_item">
             <a class="submenu_products_link virtual_reality" href="#">
-              Виртуальная
-              реальность
+              <h3 class="submenu_products_text">
+                Виртуальная
+                <br>
+                 реальность
+              </h3>
             </a>
           </li>
 
           <li class="submenu_products_item">
             <a class="submenu_products_link monopods" href="#">
-              Моноподы
-              для селфи
+              <h3 class="submenu_products_text">
+                Моноподы
+                <br>
+                 для селфи
+              </h3>
+            </h3>
             </a>
           </li>
 
           <li class="submenu_products_item">
             <a class="submenu_products_link action_camera" href="#">
-              Экшн-камеры
+              <h3 class="submenu_products_text">
+                Экшн-камеры
+              </h3>
             </a>
           </li>
 
           <li class="submenu_products_item">
             <a class="submenu_products_link fitness_bracelet" href="#">
-              Фитнес-браслеты
+              <h3 class="submenu_products_text">
+                Фитнес-браслеты
+              </h3>
             </a>
           </li>
 
           <li class="submenu_products_item">
             <a class="submenu_products_link smart_watch" href="#">
-              Умные часы
+              <h3 class="submenu_products_text">
+                Умные часы
+              </h3>
             </a>
           </li>
 
           <li class="submenu_products_item">
             <a class="submenu_products_link drones" href="#">
-              Квадрокоптеры
+              <h3 class="submenu_products_text">
+                Квадрокоптеры
+              </h3>
             </a>
           </li>
         </ul>
@@ -300,25 +317,27 @@
 
       <!-- Tab-->
       <section class="advantages_tabs">
-        <h2 class="visually-hidden">
+        <h2 class="visually_hidden">
           Преимущества интернет-магазина Device.
         </h2>
-        <div class="container">
-          <div class="">
-            <button class="button" type="button">
+        <div class="container tabs_wrapper">
+          <div class="tabs_button">
+            <button class="button tabs_caption is_active" type="button">
               Доставка
             </button>
-            <button class="button" type="button">
+            <button class="button tabs_caption" type="button">
               Гарантия
             </button>
-            <button class="button" type="button">
+            <button class="button tabs_caption" type="button">
               Кредит
             </button>
           </div>
           <div class="content_tabs">
-            <div class="">
-              <h3 class="title">Доставка</h3>
-              <p class="">
+              <div class="content_tabs delivery_tabs is_active">
+            <h3 class="title title_tabs">
+                Доставка
+              </h3>
+              <p class="tabs_text">
                 Мы с удовольствием доставим ваш товар прямо
                 <br>
                 к вашему подъезду совершенно бесплатно!
@@ -326,9 +345,11 @@
                 Ведь мы неплохо заработаем, поднимая его на ваш этаж.
               </p>
             </div>
-            <div class="content_tabs">
-              <h3 class="title">Гарантия</h3>
-              <p class="tabs-text">
+            <div class="content_tabs guarantee_tabs">
+              <h3 class="title title_tabs">
+                Гарантия
+              </h3>
+              <p class="tabs_text">
                 Если из-за возгорания купленного у нас товара у вас
                 <br>
                 сгорит дом — не переживайте, мы выдадим вам новый.
@@ -336,9 +357,11 @@
                 Товар, не дом, конечно же.
               </p>
             </div>
-            <div class="tabs-content tabs-credit">
-              <h3 class="title">Кредит</h3>
-              <p class="">
+            <div class="content_tabs credit_tabs">
+              <h3 class="title title_tabs">
+                Кредит
+              </h3>
+              <p class="tabs_text">
                 Залезть в долговую яму стало проще! Кредитные
                 <br>
                 консультанты подберут для вас наиболее
