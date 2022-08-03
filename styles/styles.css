@@ -1,3 +1,5 @@
+/* Шрифты */
+
 @font-face {
   font-family: "Rubik";
   font-style: normal;
@@ -22,6 +24,8 @@
   font-display: swap;
 }
 
+/* Общие стили */
+
 .visually_hidden {
   position: absolute;
   width: 1px;
@@ -43,13 +47,352 @@ body {
   flex-direction: column;
   min-height: 100%;
   min-width: 1440px;
-  font-family: "Rubik";
-  font-style: normal;
+  color: #444444;
+  font-family: "Rubik", "Arial", sans-serif;
+  font-weight: 400;
   font-size: 18px;
   line-height: 30px;
-  color: #000000;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.container {
+  width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.page_wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+/* Заголовки */
+.title {
+  font-family: "Raleway", Arial, sans-serif;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 50px;
+  color: #000000;
+  margin: 0;
+}
+
+/* Кнопки */
+
+.button{
+  display: inline-block;
+  border: none;
+  padding: 10px 10px 9px 13px;
+  text-decoration: none;
+  color: #000000;
+  text-align: center;
+  font-family: "Raleway", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0) 40%,
+    #ffe16f 40%,
+    #ffe16f 60%,
+    rgba(255, 255, 255, 0) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-position: center;
+  background-size: 100% 100%;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-size 0.2s ease;
+}
+
+/* шапка */
+.page_header{
+    padding: 20px 60px 22px 60px;
+    background-image: linear-gradient(transparent 40px, #ffe17f 40px);
+    position: relative;
+}
+
+.page_logo{
+  display: inline-block;
+  margin-bottom: 20px;
+  transition: opacity 0.3s;
+}
+
+.header_user_bar{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  justify-content: space-between;
+}
+
+.search_form{
+  display: flex;
+  align-items: flex-start;
+}
+
+.text_search{
+  width: 359px;
+  padding: 8px 46px;
+  font: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  background-color: transparent;
+  border: 2px solid #000000;
+  border-radius: 50px 0 0 50px;
+  background-image: url("../images/svg/header-search.svg");
+  background-repeat: no-repeat;
+  background-position: 14px;
+}
+
+.button_search{
+  width: 160px;
+  padding: 8px;
+  text-align: center;
+  font: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  background-color: transparent;
+  border: 2px solid #000000;
+  border-radius: 0 50px 50px 0;
+  cursor: pointer;
+  border-left: none;
+  outline: none;
+  position: relative;
+}
+
+.user_bar_wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 497px;
+  max-width: 503px;
+}
+
+.header_link {
+  text-decoration: none;
+  color: #000000;
+  margin: auto 0 auto 18px;
+  border: none;
+  font: inherit;
+  background-color: transparent;
+}
+
+.header_link:nth-child(4n + 1) {
+  margin-left: 0;
+}
+
+.link_wrapper {
+  display: flex;
+  flex-grow: 1;
+}
+
+.login_link{
+  align-self: center;
+  padding-left: 27px;
+  background-image: url("../image/login.svg");
+  background-repeat: no-repeat;
+  background-position: 1px;
+}
+
+.compare_link{
+  padding-left: 22px;
+  background-image: url("../image/compare.svg");
+  background-repeat: no-repeat;
+  background-position: 0;
+  grid-column-start: 3;
+}
+
+/* .basket-container {
+  display: flex;
+  margin-left: 18px;
+  align-items: center;
+  position: relative;
+} */
+
+.basket_link{
+  padding: 0;
+  padding-left: 43px;
+  background-image: url("../image/basket.svg");
+  background-repeat: no-repeat;
+  background-position: 15px 36%;
+  position: relative;
+  cursor: pointer;
+}
+
+/* .basket-link::before {
+  content: "2";
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  font-size: 14px;
+  line-height: 16px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  text-align: center;
+  padding: 3px 0 4px 0;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+} */
+
+
+
+.navigation_link {
+  text-decoration: none;
+  color: #000000;
+  font-family: "Raleway", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.navigation_link.is-active {
+  border-bottom: 2px solid #000000;
+  padding-bottom: 2px;
+}
+
+.catalog_button {
+  width: 293px;
+  padding: 15px 57px 15px 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: left;
+  position: relative;
+  align-self: flex-start;
+  z-index: 3;
+  text-decoration: none;
+  color: #000000;
+  font-family: "Raleway", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.catalog_dropdown {
+  position: absolute;
+  top: -1px;
+  right: 0;
+  bottom: 0;
+  margin: auto 0;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.catalog_dropdown::after,
+.catalog_dropdown::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 16px;
+  height: 2px;
+  background-color: #000000;
+}
+
+.catalog_dropdown::after {
+  transform: rotate(90deg);
+  transition: transform 0.2s ease-in;
+}
+
+.navigation {
+  display: grid;
+  padding: 0;
+  width: 100%;
+  grid-template-columns: 1fr 630px;
+  align-items: center;
+  gap: 26px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 3;
+}
+
+.navigation_list_container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  transform: translateX(4px);
+}
+
+.navigation_list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin: 0;
+  padding: 0;
+  column-gap: 46px;
+  row-gap: 15px;
+}
+
+/*Всплывающее меню*/
+.submenu {
+  display: none;
+  position: absolute;
+  padding: 14px 60px 27px 60px;
+  flex-wrap: wrap;
+  width: 1160px;
+  top: 100%;
+  left: -60px;
+  background-color: #ffe17f;
+  z-index: 2;
+  min-height: 161px;
+}
+
+.catalog_button:active ~ .submenu,
+.catalog_button:focus ~ .submenu,
+.catalog_sublist_container:focus-within > .submenu{
+  display: flex;
+}
+
+.submenu_list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0 57px 0 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.submenu_item:not(:last-child) {
+  margin-bottom: 6px;
+}
+
+.menu-sublist-link {
+  text-decoration: none;
+  color: #000000;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.submenu_item_link.is_active {
+  border-bottom: 1px solid #000000;
+  padding-bottom: 2px;
+}
+/*
 
 .main_container {
   flex-grow: 1;
@@ -94,8 +437,8 @@ a {
   margin: 0 auto;
 }
 
-/*Шапка */
-.page_header {
+/* /*Шапка */
+/* .page_header {
   display: flex;
   flex-wrap: wrap;
   min-height: 186px;
@@ -220,10 +563,7 @@ a {
   position: relative;
 }
 
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+
 
 .icon_login_office::before,
 .icon_login::before {
@@ -283,9 +623,9 @@ a {
 .text_search::placeholder {
   color: #000000;
 }
-
+ */
 /* Подменю шапки */
-.submenu_list {
+/* .submenu_list {
   list-style-type: none;
   display: none;
   font-family: 'Rubik';
@@ -326,11 +666,11 @@ a {
   padding: 0;
   width: 294px;
   text-align: left;
-}
+} */
 
 /* Кнопки */
 
-.button {
+/* .button {
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 800;
@@ -339,10 +679,10 @@ a {
   text-align: center;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-}
+} */
 
 /* Слайдер */
-.slide {
+/* .slide {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
@@ -435,10 +775,10 @@ a {
   width: 160px;
   height: 160px;
   background-color: #FFE17F;
-}
+} */
 
 /* Картинки ссылок подменю */
-.virtual_reality::before {
+/* .virtual_reality::before {
   background-image: url("../image/virtual_reality.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -491,10 +831,10 @@ a {
   display: block;
   position: relative;
   padding-top: 193px;
-}
+} */
 
 /* Описание */
-.description {
+/* .description {
   max-width: 560px;
   color: #444444;
   margin: 0;
@@ -582,11 +922,11 @@ a {
   background-image: url("../image/car.svg");
   background-repeat: no-repeat;
   background-position: center;
-}
+} */
 
 /* О нас */
 .flex_info {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 520px 532px;
   grid-template-rows: 1fr;
   gap: 108px;
@@ -597,7 +937,7 @@ a {
 
 .title_about_us {
   margin: 48px 0 48px 0;
-}
+} */
 
 .description_about_us {
   margin-bottom: 30px;
@@ -614,10 +954,10 @@ a {
   margin: 0;
   margin-bottom: 30px;
   list-style-type: none;
-}
+} */
 
 /* Подписаться на рассылку */
-.section_subscribe {
+/* .section_subscribe {
   display: flex;
   flex-wrap: wrap;
   background-color: #F0F0F0;
@@ -641,10 +981,10 @@ a {
   min-width: 160px;
   margin-left: 188px;
   padding: 13px 0 13px 0;
-}
+} */
 
 /* Форма */
-.form_email {
+/* .form_email {
   display: flex;
 }
 
@@ -675,11 +1015,11 @@ a {
   width: 253px;
   height: 57px;
   border: 3px solid #C4C4C4;
-}
+} */
 
 /* Подвал */
 
-.footer_container {
+/* .footer_container {
   display: grid;
   grid-template-columns: 239px 509px 239px;
   column-gap: 119px;
@@ -727,10 +1067,10 @@ a {
   color: #FFFFFF;
   margin-right: 35px;
   padding: 0;
-}
+} */
 
 /* Хлебные крошки */
-.breadcrumbs {
+/* .breadcrumbs {
   list-style-type: none;
   display: flex;
 }
@@ -768,10 +1108,10 @@ a {
 .container_text_product {
   display: flex;
   justify-content: space-between;
-}
+} */
 
 /* Заголовки секций */
-.select_sorting_title {
+/* .select_sorting_title {
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 800;
@@ -780,9 +1120,9 @@ a {
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
-
+ */
 /* Заголовки чекбоксов */
-.catalog_filter_title {
+/* .catalog_filter_title {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 700;
@@ -793,10 +1133,10 @@ a {
 
 .catalog_filter_list {
   list-style-type: none;
-}
+} */
 
 /* Чекбоксы */
-.control {
+/* .control {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
@@ -875,4 +1215,5 @@ a {
   width: 40px;
   height: 40px;
   padding-top: 25px;
-}
+} */
+/*  */
