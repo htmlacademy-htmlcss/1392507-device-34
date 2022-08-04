@@ -1121,249 +1121,280 @@ padding-top: 73px;
   fill: #FFC700;
 }
 
-/*
+/* Каталог */
+/* Хлебные крошки */
 
+.breadcrumbs {
+  padding: 34px 100px 34px 100px;
+}
 
-
-
-/* Картинки ссылок подменю */
-/*
-
-/* Описание */
-/* .description {
-  max-width: 560px;
-  color: #444444;
+.breadcrumbs_title {
   margin: 0;
+  margin-bottom: 16px;
 }
 
-.container_delivery {
-  width: 1160px;
-  margin: 0 auto;
-  padding: 70px 0 70px 0;
+.breadcrumbs_list {
+  list-style-type: none;
+  font-size: 16px;
+  line-height: 19px;
+  margin: 0;
+  display: flex;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.breadcrumbs_item_link {
+  display: inline-block;
+  text-align: left;
+  margin: auto 0;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s;
+}
+
+.breadcrumbs_item {
   position: relative;
+  margin-right: 37px;
 }
 
-.button_delivery {
-  font-family: 'Raleway';
-  font-style: normal;
+.breadcrumbs_item::after {
+  content: "";
+  position: absolute;
+  background-image: url("../image/arrow_breadcrumbs.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 7px;
+  width: 4px;
+  top: 49%;
+  transform: translateY(-50%);
+  right: -21px;
+}
+
+.breadcrumbs_item:last-child::after {
+  content: none;
+}
+
+
+/*Фильтр*/
+
+.catalog_form {
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 25px 60px;
+}
+
+.catalog_title {
+  font-family: "Raleway", Arial, sans-serif;
   font-weight: 800;
-  font-size: 20px;
-  line-height: 23px;
-  text-align: center;
+  line-height: 19px;
+  font-size: 16px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 1160px;
-  height: 100px;
-  background-color: #F0F0F0;
-  border: none;
+  color: #000000;
+  margin: 0;
+  margin-bottom: 58px;
 }
 
-.transport_item {
-  font-family: 'Rubik';
-  font-style: normal;
+.catalog_filter {
+  border: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 34px;
+}
+
+.catalog_filter_title {
+  width: 100%;
+  padding: 14px 0 0 0;
   font-weight: 700;
-  font-size: 18px;
   line-height: 20px;
   letter-spacing: -0.02em;
-}
-
-.transport_item:not(:last-child) {
-  margin-bottom: 18px;
-}
-
-.tab_container {
-  display: flex;
-  width: 1440px;
-  min-height: 289px;
-  margin: 0 auto;
+  margin: 0;
+  margin-bottom: 20px;
+  color: #000000;
   position: relative;
 }
 
-.tab_container::before {
+.catalog_filter_title::before {
   content: "";
-  width: 1440px;
-  height: 289px;
-  background-color: #F0F0F0;
   position: absolute;
-  z-index: -1;
-  top: 40px
-}
-
-.tab_links_delivery {
-  display: block;
-  padding-right: 120px;
-  padding-left: 14px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  width: 200px;
+  height: 2px;
   background-color: #000000;
-  color: #FFE17F;
-  border: none;
-}
-
-.tab_links {
-  border: none;
-}
-
-.button_delivery::after {
-  content: "";
-  width: 125px;
-  height: 100px;
-  z-index: 1;
-  background: #FFE17F;
-  position: absolute;
+  top: 0;
   left: 0;
-  background-image: url("../image/car.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-} */
-
-/* О нас */
-.flex_info {
-  /* display: grid;
-  grid-template-columns: 520px 532px;
-  grid-template-rows: 1fr;
-  gap: 108px;
-  width: 1160px;
-  margin: 0 auto;
-  padding: 0 0 70px 0;
 }
 
-.title_about_us {
-  margin: 48px 0 48px 0;
-} */
+/*Блок с продуктами*/
 
-.description_about_us {
-  margin-bottom: 30px;
+.main_container{
+  background-color: #f0f0f0;
 }
 
-.title_contacts {
-  margin: 0;
-  margin-top: 30px;
+.product_catalog  {
+  display: flex;
+}
+
+/*Range*/
+
+.range {
+  max-width: 200px;
+  padding-top: 8px;
+}
+
+.range_scale {
+  position: relative;
+  height: 2px;
+  background-color: #dcdcdc;
   margin-bottom: 15px;
 }
 
-.about_us_list {
+.range_bar {
+  position: absolute;
+  height: 2px;
+  background-color: #000000;
+}
+
+.range_toggle {
   padding: 0;
   margin: 0;
-  margin-bottom: 30px;
-  list-style-type: none;
-} */
-
-/* Подписаться на рассылку */
-/* .section_subscribe {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #F0F0F0;
-  padding-top: 64px;
-  padding-bottom: 56px;
-  width: 1440px;
-  margin: 0 auto;
-  position: relative;
-  padding: 64px 140px 56px 146px;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: #ebebeb;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 
-.title_subscribe {
-  margin: 0 252px 144px 0
+.toggle_min {
+  left: 0;
+  transform: translateX(-50%) translateY(-50%);
 }
 
-.description_subscribe {
-  margin-top: 10px;
+.toggle_max {
+  right: 0;
+  transform: translateX(50%) translateY(-50%);
 }
 
-.check_mark {
-  min-width: 160px;
-  margin-left: 188px;
-  padding: 13px 0 13px 0;
-} */
-
-/* Форма */
-/* .form_email {
+.range_wrapper_inputs {
   display: flex;
 }
 
-.input_email {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 30px;
-  color: #444444;
-  opacity: 0.5;
-  width: 500px;
-  height: 52px;
+.catalog_filter_label {
+  display: flex;
+  font: inherit;
+  font-size: 15px;
+  line-height: 18px;
+  margin-left: 5px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.range_input {
+  width: 60px;
+  padding: 0;
+  margin-left: 5px;
+  font: inherit;
+  text-align: left;
+  background-color: transparent;
   border: none;
-  border-bottom: 3px solid #C4C4C4;
-  background-color: #F0F0F0;
-  padding-left: 16px;
+  appearance: textfield;
+  color: rgba(0, 0, 0, 0.3);
 }
 
-.button_subscribe {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 21px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  width: 253px;
-  height: 57px;
-  border: 3px solid #C4C4C4;
-} */
-
-/* Подвал */
-
-/* .footer_container {
-  display: grid;
-  grid-template-columns: 239px 509px 239px;
-  column-gap: 119px;
-  row-gap: 47px;
+.range_input_from {
+  transform: translateX(-24%);
 }
 
-.footer_list {
-  display: flex;
-  list-style-type: none;
+.range_input_to {
+  transform: translateX(-4%);
+}
+
+.range_input::-webkit-outer-spin-button,
+.range_input::-webkit-inner-spin-button {
+  appearance: none;
   margin: 0;
 }
 
-.social_list {
-  list-style-type: none;
-}
-
-.footer {
-  width: 1440px;
-  padding: 62px 140px 62px 140px;
-  margin: 0 auto;
-  background-color: #444444;
-}
-
-.contacts_address {
+.catalog_filter_list {
   margin: 0;
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  color: #FFFFFF;
-}
-
-.footer_navigation_link {
-  display: flex;
-  flex-wrap: wrap;
-  width: 130px;
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 21px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  margin-right: 35px;
   padding: 0;
-} */
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  list-style-type: none;
+}
+
+.catalog_filter_item:not(:last-child) {
+  margin-bottom: 18px;
+}
+
+.control {
+  position: relative;
+  display: inline-block;
+  padding-left: 36px;
+  cursor: pointer;
+  transition: opacity 0.3;
+}
+
+.control_mark {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 2px solid #cccccc;
+  left: 0;
+  border-radius: 3px;
+}
+
+.control_input_checkbox:checked + .control_mark {
+  background-image: url("../image/tick.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  border-color: #000000;
+}
+
+.control_radio {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 2px solid #cccccc;
+  left: 0;
+  border-radius: 50%;
+  transition: opacity 0.3;
+}
+
+.control_input_radio:checked + .control_radio {
+  border-color: #000000;
+}
+
+.control_input_radio:checked + .control_radio::before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #000000;
+  border-radius: 50%;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.filter_group_down {
+  margin-bottom: 38px;
+}
+
+.catalog_filter_button {
+  width: 220px;
+}
+
+
+
+/*
 
 /* Хлебные крошки */
 /* .breadcrumbs {
