@@ -154,7 +154,7 @@ img {
   background-color: transparent;
   border: 2px solid #000000;
   border-radius: 50px 0 0 50px;
-  background-image: url("../images/svg/header-search.svg");
+  background-image: url("../image/icons_search.svg");
   background-repeat: no-repeat;
   background-position: 14px;
 }
@@ -217,12 +217,12 @@ img {
   grid-column-start: 3;
 }
 
-/* .basket-container {
+.basket_container {
   display: flex;
   margin-left: 18px;
   align-items: center;
   position: relative;
-} */
+}
 
 .basket_link{
   padding: 0;
@@ -234,7 +234,7 @@ img {
   cursor: pointer;
 }
 
-/* .basket-link::before {
+.basket_link::before {
   content: "2";
   position: absolute;
   width: 21px;
@@ -248,9 +248,147 @@ img {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-} */
+}
 
+/* Тултип */
+.basket_tooltip {
+display: none;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: absolute;
+  width: 320px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  z-index: 4;
+  top: calc(100% + 5px);
+  right: -77px;
+}
 
+.basket_container:hover .basket_tooltip {
+  display: flex;
+}
+
+.basket_tooltip::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 14px;
+  height: 6px;
+  transform: translateX(-50%) translateY(-6px);
+  background-color: #000000;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.basket_tooltip::after{
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+}
+
+.basket_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.basket_item {
+  display: grid;
+  grid-template-columns: 39px 1fr 30px;
+  column-gap: 23px;
+  align-items: start;
+  padding: 20px;
+}
+
+.basket_item:not(:last-child){
+  border-bottom: 1px solid rgba(220, 220, 220, 0.1);
+}
+
+.basket_title {
+  margin: 0;
+  font: inherit;
+}
+
+.basket_button_delete {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  transform: translate(30%, -30%);
+}
+
+.basket_button_delete::before,
+.basket_button_delete::after {
+  content: "";
+  width: 2px;
+  height: 14px;
+  background-color: #ffffff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+}
+
+.basket_button_delete::before{
+  transform: translateY(-50%) translateX(-50%) rotate(45deg);
+}
+
+.basket_button_delete::after{
+  transform: translateY(-50%) translateX(-50%) rotate(-45deg);
+}
+
+.basket_summary {
+  padding: 15px 20px;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 10px;
+  background-color: #444444;
+  margin-bottom: 20px;
+}
+
+.basket_summary_text {
+  margin: 0;
+}
+.total{
+  text-align: end;
+}
+
+.basket_tooltip_link {
+  display: flex;
+  justify-content: center;
+  width: calc(100% - 40px);
+  margin: 0 auto 20px auto;
+  background: #FFFFFF;
+  min-height: 50px;
+  text-decoration: none;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+  align-items: center;
+}
+
+.navigation {
+  display: grid;
+  padding: 0;
+  width: 100%;
+  grid-template-columns: 1fr 630px;
+  align-items: center;
+  gap: 26px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 3;
+}
 
 .navigation_link {
   text-decoration: none;
@@ -263,7 +401,7 @@ img {
   text-transform: uppercase;
 }
 
-.navigation_link.is-active {
+.navigation_link.is_active {
   border-bottom: 2px solid #000000;
   padding-bottom: 2px;
 }
@@ -699,13 +837,13 @@ padding-top: 73px;
   outline-offset: 2px;
 }
 
-.content_tabs {
+.container_tabs{
   padding: 73px 278px 55px 116px;
   position: relative;
 }
 
 .content_tabs {
-
+display: none;
   background-repeat: no-repeat;
   transition: 0.25s;
 }
@@ -716,6 +854,31 @@ padding-top: 73px;
   transform: translateY(-50%);
   position: absolute;
 }
+
+.delivery_tabs::after {
+  height: 164px;
+  width: 136px;
+  right: 63px;
+  background-image: url("../image/delivery_icons.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.guarantee_tabs::after {
+  height: 195px;
+  width: 171px;
+  right: 26px;
+  background-image: url("../image/guarantee_icons.svg");
+}
+
+.credit_tabs::after {
+  height: 188px;
+  width: 156px;
+  right: 25px;
+  background-image: url("../image/credit_icons.svg");
+}
+
 
 .title_tabs {
   margin-bottom: 34px;

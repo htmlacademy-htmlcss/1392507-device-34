@@ -21,7 +21,7 @@
               Поиск по сайту.
             </label>
             <div class="header_search_wrapper">
-            <input class="text_search" type="text" name="text_search" placeholder="Текст поиска">
+            <input class="text_search" type="text" name="text_search" id="text_search" placeholder="Текст поиска">
           </div>
             <button class="button_search" type="submit">
               Найти
@@ -37,10 +37,53 @@
             <a class="header_link compare_link" href="#">
               Сравнить
             </a>
+
+            <div class="basket_container">
             <button class="header_link basket_link" type="button">
               Корзина
             </button>
+            <div class="basket_tooltip">
+              <h2 class="visually_hidden">
+                Корзина.
+              </h2>
+              <ul class="basket_list">
+                <li class="basket_item">
+                  <img class="basket_img" src="image/product_1.jpg" alt="Селфи-палка для любителей." width="39" height="43">
+                  <h3 class="basket_title">
+                    Любительская селфи-палка
+                  </h3>
+                  <button class="basket_button_delete">
+                    <span class="visually_hidden">
+                      Удалить товар из корзины.
+                    </span>
+                  </button>
+                </li>
+                <li class="basket_item">
+                  <img class="basket_img" src="image/product_2.jpg" alt="Селфи-палка для любителей." width="39" height="43">
+                  <h3 class="basket_title">
+                    Профессиональная селфи-палка
+                  </h3>
+                  <button class="basket_button_delete">
+                    <span class="visually_hidden">
+                      Удалить товар из корзины.
+                    </span>
+                  </button>
+                </li>
+              </ul>
+              <div class="basket_summary">
+                <p class="basket_summary_text count">
+                  Товаров: 2
+                </p>
+                <p class="basket_summary_text total">
+                  Сумма: 2000 ₽
+                </p>
+              </div>
+              <a class="basket_tooltip_link" href="#">
+                Открыть корзину
+              </a>
           </div>
+          </div>
+        </div>
         </div>
 
         <!-- Навигация -->
@@ -147,7 +190,7 @@
           </div>
 
           <div class="slider_item is_active">
-            <img class="slider_image" src="image/slider_1.jpg" alt="Фото квадрокоптера.">
+            <img class="slider_image" src="image/slider_1.png" alt="Фото квадрокоптера.">
             <div class="slider_desc_wrapper">
               <span class="number_slide">
                 01
@@ -187,7 +230,7 @@
           </div>
 
           <div class="slider_item">
-            <img class="slider_image" src="image/slider_2.jpg" alt="Фото квадрокоптера.">
+            <img class="slider_image" src="image/slider_2.png" alt="Фото квадрокоптера.">
             <div class="slider_desc_wrapper">
               <span class="number_slide">
                 02
@@ -217,7 +260,7 @@
           </div>
 
           <div class="slider_item">
-            <img class="slider_image" src="image/slider_3.jpg" alt="Фото квадрокоптера.">
+            <img class="slider_image" src="image/slider_3.png" alt="Фото квадрокоптера.">
             <div class="slider_desc_wrapper">
               <span class="number_slide">
                 03
@@ -242,7 +285,7 @@
                     8,5 м
                   </dd>
                 </div>
-                <div class="slider_features_item">
+                <div class="slider_advantages_item">
                   <dt class="slider_advantages_name">
                     Вес палки
                   </dt>
@@ -250,7 +293,7 @@
                     5 кг
                   </dd>
                 </div>
-                <div class="slider_features_item">
+                <div class="slider_advantages_item">
                   <dt class="slider_advantages_name">
                     Материал
                   </dt>
@@ -284,7 +327,6 @@
                   Моноподы
                   <br>
                   для селфи
-                </h3>
                 </h3>
               </a>
             </li>
@@ -341,7 +383,7 @@
                 Кредит
               </button>
             </div>
-            <div class="content_tabs">
+            <div class="container_tabs">
               <div class="content_tabs delivery_tabs is_active">
                 <h3 class="title title_tabs">
                   Доставка
@@ -570,6 +612,8 @@
         </div>
       </footer>
     </div>
+
+    <script src="js/index.js"></script>
   </body>
 
 </html>
