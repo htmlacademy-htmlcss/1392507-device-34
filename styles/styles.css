@@ -4,7 +4,7 @@
   font-family: "Rubik";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/rubik-400.woff2") format("woff2");
+  src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -12,7 +12,7 @@
   font-family: "Rubik";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/rubik-700.woff2") format("woff2");
+  src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -20,7 +20,7 @@
   font-family: "Raleway";
   font-style: normal;
   font-weight: 800;
-  src: url("../fonts/raleway-800.woff2") format("woff2");
+  src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -207,6 +207,10 @@ img {
   background-image: url("../image/login.svg");
   background-repeat: no-repeat;
   background-position: 1px;
+}
+
+.exit_link{
+  opacity: 0.3;
 }
 
 .compare_link{
@@ -407,7 +411,7 @@ display: none;
 }
 
 .catalog_button {
-  padding: 15px 57px 15px 0;
+  padding: 15px 66px 15px 0;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -1077,7 +1081,7 @@ display: none;
   margin: 0;
   padding: 0;
   padding-top: 10px;
-  max-width: 553px;
+  min-width: 553px;
 }
 
 .subscribe_form {
@@ -1108,7 +1112,7 @@ display: none;
 
 .button_subscribe {
   max-width: 330px;
-  padding: 16px 35px;
+  padding: 14px 35px;
   font-family: "Raleway", Arial, sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -1892,8 +1896,8 @@ display: none;
   opacity: 0.1;
 }
 
-.catalog_button:active .catalog-dropdown::after,
-.catalog_button:focus .catalog-dropdown::after  {
+.catalog_button:active .catalog_dropdown::after,
+.catalog_button:focus .catalog_dropdown::after  {
   transform: rotate(0deg);
 }
 
@@ -2218,5 +2222,323 @@ display: none;
 .pagination_button:focus {
   outline: #af4fff 2px solid;
   outline-offset: 2px;
+}
+
+/* Модальное окно */
+
+.modal_container {
+
+  position: fixed;
+  z-index: 15;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(240, 240, 240, 0.9);
+}
+
+.modal_container.is_open {
+  display: block;
+}
+
+.modal_delivery_wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 920px;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 62px 70px;
+  border: 10px solid #000000;
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.modal_close_button {
+  position: absolute;
+  top: 73px;
+  right: 69px;
+  width: 26px;
+  height: 26px;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.modal_close_button:hover.modal_close_button::before,
+.modal_close_button:hover.modal_close_button::after {
+  opacity: 0.6;
+}
+
+.modal_close_button:active.modal_close_button::before,
+.modal_close_button:active.modal_close_button::after {
+  opacity: 0.3;
+}
+
+.modal_close_button::before,
+.modal_close_button::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 36px;
+  height: 3px;
+  content: "";
+  background-color: #000000;
+}
+
+.modal_close_button::before {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.modal_close_button::after {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.modal_title {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 800;
+  margin: 0 0 42px;
+  max-width: 700px;
+}
+
+.inputs_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 62px;
+}
+
+.inputs_wrapper:last-of-type {
+  margin-bottom: 42px;
+}
+
+.input_wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal_form_label {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+  cursor: pointer;
+  max-width: 220px;
+}
+
+.amount_label .modal_form_label {
+  max-width: 150px;
+}
+
+.modal_form_input  {
+  padding: 20px 40px 20px 20px;
+  border: none;
+  background-color: #f0f0f0;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.modal_form_input ::placeholder {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.modal_form_input:hover {
+  background-color: #dcdcdc;
+}
+
+.email_input {
+  background-image: url("../image/modal_email_icons.svg");
+  background-repeat: no-repeat;
+  background-position: right 24px center;
+}
+
+.email_input.is_invalid {
+  outline: 2px solid #ff3d3d;
+}
+
+.email_input:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.error_text {
+  position: absolute;
+  left: 0;
+  bottom: -21px;
+  color: #ff3d3d;
+  font-size: 14px;
+  line-height: 20px;
+  display: none;
+}
+
+.email_input.is_invalid+.error_text {
+  display: block;
+}
+
+.info_text {
+  position: absolute;
+  left: 0;
+  bottom: -21px;
+  color: #000000;
+  font-size: 14px;
+  line-height: 20px;
+  display: none;
+}
+
+.user_name_input {
+  background-image: url("../image/modal_user_icons.svg");
+  background-repeat: no-repeat;
+  background-position: right 24px center;
+}
+
+.user_name_input:placeholder-shown+.info_text {
+  display: block;
+}
+
+.product_wrapper {
+  grid-template-columns: 540px 180px;
+}
+
+.amount_label {
+  position: relative;
+  display: flex;
+  z-index: 2;
+}
+
+.tooltip {
+  display: flex;
+  margin-left: 9px;
+  transform: translateY(-3px);
+}
+
+.tooltip_text {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0s linear 0.3s;
+  width: 200px;
+  top: 36px;
+  right: -34px;
+  margin: 0;
+  padding: 19px 17px 19px 19px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
+  z-index: 5;
+}
+
+.tooltip_text::after {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 6px;
+  background-color: #000000;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  top: -6px;
+  left: 73%;
+}
+
+.tooltip_button {
+  border: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #ffe17f;
+  background-image: url("../image/modal_tooltip_i.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0;
+  cursor: pointer;
+}
+
+.tooltip_button:focus {
+  outline: none;
+}
+
+.tooltip_button:hover+.tooltip_text,
+.tooltip_button:focus+.tooltip_text {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.input_buttons_wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+}
+
+.input_buttons_wrapper.is_invalid {
+  border: 2px solid #ff3d3d;
+}
+
+.product_amount_input {
+  text-align: center;
+  padding: 0 5px;
+  max-width: 60px;
+}
+
+.product_amount_input:focus {
+  outline: none;
+}
+
+.less_more_button {
+  position: relative;
+  background-color: #f0f0f0;
+  padding: 0;
+  width: 60px;
+  height: 60px;
+  border: none;
+  cursor: pointer;
+}
+
+.less_more_button:hover.number_down_button::before,
+.less_more_button:hover.number_up_button::before,
+.less_more_button:hover.number_up_button::after {
+  opacity: 0.6;
+}
+
+.less_more_button:active.number_down_button::before,
+.less_more_button:active.number_up_button::before,
+.less_more_button:active.number_up_button::after {
+  opacity: 0.3;
+}
+
+.less_more_button.number_down_button::before,
+.less_more_button.number_up_button::before {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000000;
+}
+
+.less_more_button.number_up_button::after {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  background-color: #000000;
+}
+
+.order_form_submit {
+  width: 200px;
 }
 

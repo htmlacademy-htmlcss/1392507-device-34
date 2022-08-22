@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
   </head>
 
   <body>
@@ -102,7 +103,7 @@
                   </a>
                 </li>
                 <li class="submenu_item">
-                  <a class="submenu_item_link" href="#">
+                  <a class="submenu_item_link" href="catalog.html">
                     Моноподы для cелфи
                   </a>
                 </li>
@@ -196,8 +197,7 @@
                 01
               </span>
               <h3 class="title slogan_slider">
-                Порхает как бабочка,
-                жалит как пчела!
+                Порхает как бабочка,<br> жалит как пчела!
               </h3>
               <p class="description_slide">
                 Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным
@@ -266,7 +266,9 @@
                 03
               </span>
               <h3 class="title slogan_slider">
-                Делай селфи, как Бен Стиллер!
+                Делай селфи,
+                <br>
+                 как Бен Стиллер!
               </h3>
               <p class="description_slide">Самая длинная палка для селфи доступна в нашем магазине. Восемь
                 (Восемь, Карл!) метров
@@ -322,7 +324,7 @@
             </li>
 
             <li class="submenu_products_item">
-              <a class="submenu_products_link monopods" href="#">
+              <a class="submenu_products_link monopods" href="catalog.html">
                 <h3 class="submenu_products_text">
                   Моноподы
                   <br>
@@ -391,9 +393,9 @@
                 <p class="tabs_text">
                   Мы с удовольствием доставим ваш товар прямо
                   <br>
-                  к вашему подъезду совершенно бесплатно!
+                  к вашему подъезду совершенно бесплатно! Ведь
                   <br>
-                  Ведь мы неплохо заработаем, поднимая его на ваш этаж.
+                   мы неплохо заработаем, поднимая его на ваш этаж.
                 </p>
               </div>
               <div class="content_tabs guarantee_tabs">
@@ -415,10 +417,9 @@
                 <p class="tabs_text">
                   Залезть в долговую яму стало проще! Кредитные
                   <br>
-                  консультанты подберут для вас наиболее
+                  консультанты подберут для вас наиболее выгодные
                   <br>
-                  выгодные условия кредита. Выгодные
-                  для банка, разумеется.
+                  условия кредита. Выгодные для банка, разумеется.
                 </p>
               </div>
             </div>
@@ -486,7 +487,7 @@
                 Санкт-Петербург, набережная реки Карповки, 5, литера П.
               </p>
               <a class="contacts_phone" href="tel:+78128121212">
-                +7 812 812-12-12
+                +7 (812) 812-12-12
               </a>
             </address>
             <h4 class="subtitle_about_us">
@@ -573,7 +574,7 @@
             </ul>
 
               <a class="contacts_phone_footer" href="tel:+78128121212">
-                +7 812 812-12-12
+                Тел.: +7 (812) 812-12-12
               </a>
 
             <ul class="footer_social_list">
@@ -611,6 +612,90 @@
           </section>
         </div>
       </footer>
+    </div>
+
+<!-- Модальное окно -->
+    <div class="modal_container">
+      <div class="modal_delivery_wrapper">
+        <button class="modal_close_button focus_element">
+        </button>
+        <h2 class="modal_title">
+          Доставка под заказ
+        </h2>
+
+        <form class="modal_form" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="inputs_wrapper">
+            <div class="input_wrapper">
+              <label class="modal_form_label" for="user_name">
+                Ваше имя:
+              </label>
+              <input class="modal_form_input user_name_input focus_element" type="text" name="user-name" required=""
+                value="" placeholder="Введите имя" id="user_name">
+              <span class="info_text">
+                Добавьте имя
+              </span>
+            </div>
+
+            <div class="input_wrapper input_wrapper_email">
+              <label class="modal_form_label" for="user_email">
+                Ваш e-mail:
+              </label>
+              <!-- Если поле ввода e-mail заполнено неверно к <input> c классом email_input добавить класс is_invalid для показа сообщения -->
+              <input class="modal_form_input email_input focus_element" type="email" name="user-email" required=""
+                value="" placeholder="почта" id="user_email">
+              <span class="error_text">
+                Забавный у вас адрес
+              </span>
+            </div>
+          </div>
+
+          <div class="inputs_wrapper product_wrapper">
+            <div class="input_wrapper">
+              <label class="modal_form_label" for="product">
+                Что нужно привезти:
+              </label>
+              <input class="modal_form_input product_input focus_element" type="text" name="product" required=""
+                value="" placeholder="В свободной форме" id="product">
+            </div>
+
+            <div class="input_wrapper input_wrapper_amount">
+              <div class="amount_label">
+                <label class="modal_form_label" for="product_amount">
+                  Количество:
+                </label>
+                <span class="tooltip">
+                  <button class="tooltip_button" type="button" aria-labelledby="tooltip_label">
+                  </button>
+                  <span class="tooltip_text" role="tooltip" id="tooltip_label">
+                    Постараемся найти, сколько нужно.
+                    Привезём
+                    сколько получится по требованиям
+                    к провозу багажа.
+                  </span>
+                </span>
+              </div>
+
+              <div class="input_buttons_wrapper">
+                <button class="less_more_button number_down_button focus_element" type="button">
+                  <span class="visually_hidden">
+                    Уменьшить количество товара.
+                  </span>
+                </button>
+                <input class="modal_form_input product_amount_input" type="text" name="product_amount"
+                  id="product-amount" value="1">
+                <button class="less_more_button number_up_button focus_element" type="button">
+                  <span class="visually_hidden">
+                    Увеличить количество товара.
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <button class="order_form_submit button" type="submit">
+            Отправить
+          </button>
+        </form>
+      </div>
     </div>
 
     <script src="js/index.js"></script>
