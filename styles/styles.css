@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: > 2% and last 1 version
-*/
-
 /* Шрифты */
 
 @font-face {
@@ -147,6 +140,13 @@ img {
 .search_form {
   display: flex;
   align-items: flex-start;
+  width: 517px;
+}
+
+.header_search_wrapper {
+  display: flex;
+  max-width: 359px;
+  flex-grow: 1;
 }
 
 .text_search {
@@ -277,7 +277,9 @@ img {
   right: -77px;
 }
 
-.basket_container:hover .basket_tooltip {
+.basket_container:hover .basket_tooltip,
+.basket_container:focus-within .basket_tooltip,
+.basket_container:active .basket_tooltip {
   display: flex;
 }
 
@@ -290,17 +292,16 @@ img {
   height: 6px;
   transform: translateX(-50%) translateY(-6px);
   background-color: #000000;
-  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 
 .basket_tooltip::after {
   content: "";
   position: absolute;
-  top: -40px;
+  top: -20px;
   left: 0;
   width: 100%;
-  height: 40px;
+  height: 20px;
 }
 
 .basket_list {
@@ -310,20 +311,42 @@ img {
 }
 
 .basket_item {
-  display: grid;
-  grid-template-columns: 39px 1fr 30px;
-  column-gap: 23px;
-  align-items: start;
+  display: flex;
   padding: 20px;
+  width: 100%;
 }
 
 .basket_item:not(:last-child) {
   border-bottom: 1px solid rgba(220, 220, 220, 0.1);
 }
 
+.basket_item_link {
+  display: flex;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.basket_img {
+  margin-right: 23px;
+}
+
 .basket_title {
   margin: 0;
   font: inherit;
+  display: flex;
+}
+
+.basket_item_link:hover {
+  opacity: 0.6;
+}
+
+.basket_item_link:active {
+  opacity: 0.3;
+}
+
+.basket_item_link:focus {
+  outline: #af4fff 2px solid;
+  outline-offset: 2px;
 }
 
 .basket_button_delete {
@@ -334,6 +357,7 @@ img {
   height: 30px;
   position: relative;
   transform: translate(30%, -30%);
+  margin-left: auto;
 }
 
 .basket_button_delete::before,
@@ -355,6 +379,19 @@ img {
   transform: translateY(-50%) translateX(-50%) rotate(-45deg);
 }
 
+.basket_button_delete:hover {
+  opacity: 0.6;
+}
+
+.basket_button_delete:active {
+  opacity: 0.3;
+}
+
+.basket_button_delete:focus {
+  outline: #af4fff 2px solid;
+  outline-offset: -8px;
+}
+
 .basket_summary {
   padding: 15px 20px;
   display: grid;
@@ -373,12 +410,11 @@ img {
 }
 
 .basket_tooltip_link {
-  display: flex;
-  justify-content: center;
   width: calc(100% - 40px);
   margin: 0 auto 20px auto;
-  background: #FFFFFF;
+  background: #ffffff;
   min-height: 50px;
+  padding: 14px;
   text-decoration: none;
   font-family: "Raleway", "Arial", sans-serif;
   font-weight: 800;
@@ -389,6 +425,25 @@ img {
   text-transform: uppercase;
   color: #000000;
   align-items: center;
+}
+
+.basket_tooltip_link:hover {
+  background-color: #ffe17f;
+}
+
+.basket_tooltip_link:active {
+  background-color: #ffe17f;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.basket_tooltip_link:focus {
+  outline: #af4fff 2px solid;
+  outline-offset: 2px;
+}
+
+.basket_tooltip_link:disabled {
+  color: rgba(0, 0, 0, 0.3);
+  cursor: none;
 }
 
 .navigation {
@@ -1602,6 +1657,7 @@ img {
   background-image: url("../images/svg/select-arrow.svg");
   background-repeat: no-repeat;
   background-position: right 12px top 50%;
+  max-width: 400px;
 }
 
 .card_toggle {

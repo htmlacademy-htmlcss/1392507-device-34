@@ -6,6 +6,7 @@
   <title>HTML Academy: Девайс</title>
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" href="image/favicon.png" />
 </head>
 
 <body>
@@ -13,8 +14,8 @@
   <div class="page_wrapper">
     <div class="container">
       <header class="page_header">
-        <a href="#">
-          <img class="page_logo" alt="Логотип Девайс." src="image/logo_device.svg" width="145" height="36">
+        <a class="page_logo" href="#">
+          <img alt="Логотип Девайс." src="image/logo_device.svg" width="145" height="36">
         </a>
         <div class="header_user_bar">
           <form class="search_form" action="https://echo.htmlacademy.ru/" method="post">
@@ -49,11 +50,15 @@
                 </h2>
                 <ul class="basket_list">
                   <li class="basket_item">
-                    <img class="basket_img" src="image/product_1.jpg" alt="Селфи-палка для любителей." width="39"
-                      height="43">
-                    <h3 class="basket_title">
-                      Любительская селфи-палка
-                    </h3>
+                    <a class="basket_item_link" href="#">
+                      <img class="basket_img" src="image/product_1.jpg" alt="Селфи-палка для любителей." width="39"
+                        height="43">
+                      <h3 class="basket_title">
+                        Любительская
+                        <br>
+                        селфи-палка
+                      </h3>
+                    </a>
                     <button class="basket_button_delete">
                       <span class="visually_hidden">
                         Удалить товар из корзины.
@@ -61,11 +66,15 @@
                     </button>
                   </li>
                   <li class="basket_item">
-                    <img class="basket_img" src="image/product_2.jpg" alt="Селфи-палка для любителей." width="39"
-                      height="43">
-                    <h3 class="basket_title">
-                      Профессиональная селфи-палка
-                    </h3>
+                    <a class="basket_item_link" href="#">
+                      <img class="basket_img" src="image/product_2.jpg" alt="Селфи-палка для любителей." width="39"
+                        height="43">
+                      <h3 class="basket_title">
+                        Профессиональная
+                        <br>
+                        селфи-палка
+                      </h3>
+                    </a>
                     <button class="basket_button_delete">
                       <span class="visually_hidden">
                         Удалить товар из корзины.
@@ -541,22 +550,21 @@
 
     <footer class="footer">
       <div class="container">
-        <a href="#">
-          <img class="footer_page_logo" alt="Логотип Девайс." src="image/logo_device_footer.svg" width="145"
-            height="36">
+        <a class="footer_page_logo" href="#">
+          <img alt="Логотип Девайс." src="image/logo_device_footer.svg" width="145" height="36">
         </a>
 
         <section class="section_footer">
           <h2 class="visually_hidden">
             Контактная информация
           </h2>
-<address>
-          <p class="contacts_address">
-            Санкт-Петербург, набережная
-            <br>
-            реки Карповки, 5, литера П.
-          </p>
-        </address>
+          <address>
+            <p class="contacts_address">
+              Санкт-Петербург, набережная
+              <br>
+              реки Карповки, 5, литера П.
+            </p>
+          </address>
 
           <ul class="footer_list">
             <li class="footer_item">
@@ -620,7 +628,7 @@
   <!-- Модальное окно -->
   <div class="modal_container">
     <div class="modal_delivery_wrapper">
-      <button class="modal_close_button focus_element">
+      <button class="modal_close_button focus_element" type="button">
       </button>
       <h2 class="modal_title">
         Доставка под заказ
@@ -644,8 +652,8 @@
               Ваш e-mail:
             </label>
             <!-- Если поле ввода e-mail заполнено неверно к <input> c классом email_input добавить класс is_invalid для показа сообщения -->
-            <input class="modal_form_input email_input focus_element" type="email" name="user-email" required=""
-              value="" placeholder="почта" id="user_email">
+            <input class="modal_form_input email_input focus_element is_invalid" type="email" name="user-email"
+              required="" value="" placeholder="почта" id="user_email">
             <span class="error_text">
               Забавный у вас адрес
             </span>

@@ -6,6 +6,7 @@
   <title>HTML Academy: Девайс</title>
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" href="image/favicon.png" />
 </head>
 
 <body>
@@ -14,8 +15,8 @@
   <div class="page_wrapper">
     <div class="container">
       <header class="page_header">
-        <a href="#">
-          <img class="page_logo" alt="Логотип Девайс." src="image/logo_device.svg" width="145" height="36">
+        <a class="page_logo" href="#">
+          <img alt="Логотип Девайс." src="image/logo_device.svg" width="145" height="36">
         </a>
 
         <div class="header_user_bar">
@@ -44,9 +45,61 @@
             <a class="header_link compare_link" href="#">
               Сравнить
             </a>
-            <button class="header_link basket_link" type="button">
-              Корзина
-            </button>
+            <div class="basket_container">
+              <button class="header_link basket_link" type="button">
+                Корзина
+              </button>
+              <div class="basket_tooltip">
+                <h2 class="visually_hidden">
+                  Корзина.
+                </h2>
+                <ul class="basket_list">
+                  <li class="basket_item">
+                    <a class="basket_item_link" href="#">
+                      <img class="basket_img" src="image/product_1.jpg" alt="Селфи-палка для любителей." width="39"
+                        height="43">
+                      <h3 class="basket_title">
+                        Любительская
+                        <br>
+                        селфи-палка
+                      </h3>
+                    </a>
+                    <button class="basket_button_delete">
+                      <span class="visually_hidden">
+                        Удалить товар из корзины.
+                      </span>
+                    </button>
+                  </li>
+                  <li class="basket_item">
+                    <a class="basket_item_link" href="#">
+                      <img class="basket_img" src="image/product_2.jpg" alt="Селфи-палка для любителей." width="39"
+                        height="43">
+                      <h3 class="basket_title">
+                        Профессиональная
+                        <br>
+                        селфи-палка
+                      </h3>
+                    </a>
+                    <button class="basket_button_delete">
+                      <span class="visually_hidden">
+                        Удалить товар из корзины.
+                      </span>
+                    </button>
+                  </li>
+                </ul>
+                <div class="basket_summary">
+                  <p class="basket_summary_text count">
+                    Товаров: 2
+                  </p>
+                  <p class="basket_summary_text total">
+                    Сумма: 2000 ₽
+                  </p>
+                </div>
+                <a class="basket_tooltip_link" href="#">
+                  Открыть корзину
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -450,9 +503,8 @@
 
     <footer class="footer">
       <div class="container">
-        <a href="#">
-          <img class="footer_page_logo" alt="Логотип Девайс." src="image/logo_device_footer.svg" width="145"
-            height="36">
+        <a class="footer_page_logo" href="#">
+          <img alt="Логотип Девайс." src="image/logo_device_footer.svg" width="145" height="36">
         </a>
 
         <section class="section_footer">

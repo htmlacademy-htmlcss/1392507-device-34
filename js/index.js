@@ -54,3 +54,25 @@ sliderButtonPrev.addEventListener('click', (evt) => {
   sliderButtons[index].classList.add('is_active');
   sliderItems[index].classList.add('is_active');
 });
+
+
+const modalOpenBtn = document.querySelector('.button_delivery');
+const modal = document.querySelector('.modal_container');
+const modalCloseBtn = document.querySelector('.modal_close_button');
+
+modalOpenBtn.addEventListener('click', (evt) => {
+  evt.preventDefault();
+modal.classList.add('is_open');
+});
+
+modalCloseBtn.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  modal.classList.remove('is_open');
+  });
+
+document.addEventListener('keydown', (evt) => {
+  if (evt.key === 'Escape') {
+    evt.preventDefault();
+    modal.classList.remove('is_open');
+  }
+});
