@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
-  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/styles.css" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="icon" type="image/png" href="image/favicon.png" />
 </head>
@@ -14,7 +14,7 @@
   <div class="page_wrapper">
     <div class="container">
       <header class="page_header">
-        <a class="page_logo" href="#">
+        <a class="page_logo" href="index.html">
           <img alt="Логотип Девайс." src="image/logo_device.svg" width="145" height="36">
         </a>
         <div class="header_user_bar">
@@ -59,7 +59,7 @@
                         селфи-палка
                       </h3>
                     </a>
-                    <button class="basket_button_delete">
+                    <button class="basket_button_delete" type="button">
                       <span class="visually_hidden">
                         Удалить товар из корзины.
                       </span>
@@ -75,7 +75,7 @@
                         селфи-палка
                       </h3>
                     </a>
-                    <button class="basket_button_delete">
+                    <button class="basket_button_delete" type="button">
                       <span class="visually_hidden">
                         Удалить товар из корзины.
                       </span>
@@ -191,18 +191,18 @@
 
         <div class="slider_pagination">
           <button class="slides_radio is_active " type="button">
-            <span class="visually_hidden">1</span>
+            <span class="visually_hidden">1.</span>
           </button>
           <button class="slides_radio" type="button">
-            <span class="visually_hidden">2</span>
+            <span class="visually_hidden">2.</span>
           </button>
           <button class="slides_radio" type="button">
-            <span class="visually_hidden">3</span>
+            <span class="visually_hidden">3.</span>
           </button>
         </div>
 
         <div class="slider_item is_active">
-          <img class="slider_image" src="image/slider_1.png" alt="Фото квадрокоптера.">
+          <img class="slider_image" src="image/slider_1.png" alt="Фото квадрокоптера." width="560" height="560">
           <div class="slider_desc_wrapper">
             <span class="number_slide">
               01
@@ -241,7 +241,7 @@
         </div>
 
         <div class="slider_item">
-          <img class="slider_image" src="image/slider_2.png" alt="Фото квадрокоптера.">
+          <img class="slider_image" src="image/slider_2.png" alt="Фото квадрокоптера." width="560" height="560">
           <div class="slider_desc_wrapper">
             <span class="number_slide">
               02
@@ -271,7 +271,7 @@
         </div>
 
         <div class="slider_item">
-          <img class="slider_image" src="image/slider_3.png" alt="Фото квадрокоптера.">
+          <img class="slider_image" src="image/slider_3.png" alt="Фото квадрокоптера." width="560" height="560">
           <div class="slider_desc_wrapper">
             <span class="number_slide">
               03
@@ -629,6 +629,9 @@
   <div class="modal_container">
     <div class="modal_delivery_wrapper">
       <button class="modal_close_button focus_element" type="button">
+        <span class="visually_hidden">
+          Закрыть.
+        </span>
       </button>
       <h2 class="modal_title">
         Доставка под заказ
@@ -640,8 +643,8 @@
             <label class="modal_form_label" for="user_name">
               Ваше имя:
             </label>
-            <input class="modal_form_input user_name_input focus_element" type="text" name="user-name" required=""
-              value="" placeholder="Введите имя" id="user_name">
+            <input class="modal_form_input user_name_input focus_element" type="text" name="user-name" id="user_name"
+              placeholder="Введите имя" required="">
             <span class="info_text">
               Добавьте имя
             </span>
@@ -653,7 +656,7 @@
             </label>
             <!-- Если поле ввода e-mail заполнено неверно к <input> c классом email_input добавить класс is_invalid для показа сообщения -->
             <input class="modal_form_input email_input focus_element is_invalid" type="email" name="user-email"
-              required="" value="" placeholder="почта" id="user_email">
+              id="user_email" placeholder="почта" required="">
             <span class="error_text">
               Забавный у вас адрес
             </span>
@@ -665,8 +668,8 @@
             <label class="modal_form_label" for="product">
               Что нужно привезти:
             </label>
-            <input class="modal_form_input product_input focus_element" type="text" name="product" required="" value=""
-              placeholder="В свободной форме" id="product">
+            <input class="modal_form_input product_input focus_element" type="text" name="product" id="product"
+              placeholder="В свободной форме" required="">
           </div>
 
           <div class="input_wrapper input_wrapper_amount">

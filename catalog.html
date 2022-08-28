@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
-  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/styles.css" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="icon" type="image/png" href="image/favicon.png" />
 </head>
@@ -15,7 +15,7 @@
   <div class="page_wrapper">
     <div class="container">
       <header class="page_header">
-        <a class="page_logo" href="#">
+        <a class="page_logo" href="index.html">
           <img alt="Логотип Девайс." src="image/logo_device.svg" width="145" height="36">
         </a>
 
@@ -189,7 +189,7 @@
 
         <ul class="breadcrumbs_list">
           <li class="breadcrumbs_item">
-            <a class="breadcrumbs_item_link" href="#">
+            <a class="breadcrumbs_item_link" href="index.html">
               Главная
             </a>
           </li>
@@ -214,7 +214,9 @@
             Список товаров с фильтрами
           </h2>
           <form class="catalog_form" action="https://echo.htmlacademy.ru/" method="get">
-            <h3 class="catalog_title">Фильтр:</h3>
+            <h3 class="catalog_title">
+              Фильтр:
+            </h3>
             <!-- стоимость -->
             <fieldset class="catalog_filter">
               <legend class="catalog_filter_title">
@@ -238,11 +240,11 @@
                 <div class="range_wrapper_inputs">
                   <label class="catalog_filter_label range_input_from" style="left: 0">
                     от
-                    <input class="range_input" type="number" value="0" name="min_price" />
+                    <input class="range_input" type="number" value="0" name="min_price">
                   </label>
                   <label class="catalog_filter_label range_input_to" style="left: 119px">
                     до
-                    <input class="range_input" type="number" value="5000" name="max_price" />
+                    <input class="range_input" type="number" value="5000" name="max_price">
                   </label>
                 </div>
               </div>
@@ -343,7 +345,7 @@
               <span class="catalog_title sorting_title">
                 Сортировка:
               </span>
-              <select class="select_sorting">
+              <select class="select_sorting" aria-label="Сортировка">
                 <option value="popular">
                   Популярные
                 </option>
@@ -358,12 +360,12 @@
               <div class="card_toggle">
                 <a class="card_toggle_sorting card_toggle_up" href="#">
                   <span class="visually_hidden">
-                    Показать от меньшего к большему
+                    Показать от меньшего к большему.
                   </span>
                 </a>
                 <a class="card_toggle_sorting card_toggle_down" href="#">
                   <span class="visually_hidden">
-                    Показать от большего к меньшему
+                    Показать от большего к меньшему.
                   </span>
                 </a>
               </div>
@@ -397,7 +399,6 @@
                   <a class="product_card_link" href="#">
                     <img class="product_img" src="image/product_2.jpg" width="360" height="380"
                       alt="Профессиональная селфи-палка.">
-                    <br>
                     <div class="container_text_product">
                       <h3 class="product_title">
                         Профессиональная
