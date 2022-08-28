@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
-  <link rel="stylesheet" href="styles/styles.css" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="icon" type="image/png" href="image/favicon.png" />
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="image/favicon.png">
 </head>
 
 <body>
@@ -534,8 +534,10 @@
 
           <div class="subscribe_form">
             <form class="form_email" action="https://echo.htmlacademy.ru/" method="post">
-              <input class="input_email" type="email" name="email" placeholder="Ваш e-mail" required=""
-                aria-label="Ваш e-mail">
+              <label class="visually_hidden" for="email">
+                E-mail
+              </label>
+              <input class="input_email" type="email" name="email" id="email" placeholder="Ваш e-mail" aria-label="Ваш e-mail"  required>
               <button class="button_subscribe" type="submit">
                 Подписаться
               </button>
@@ -644,7 +646,7 @@
               Ваше имя:
             </label>
             <input class="modal_form_input user_name_input focus_element" type="text" name="user-name" id="user_name"
-              placeholder="Введите имя" required="">
+              placeholder="Введите имя" required>
             <span class="info_text">
               Добавьте имя
             </span>
@@ -656,7 +658,7 @@
             </label>
             <!-- Если поле ввода e-mail заполнено неверно к <input> c классом email_input добавить класс is_invalid для показа сообщения -->
             <input class="modal_form_input email_input focus_element is_invalid" type="email" name="user-email"
-              id="user_email" placeholder="почта" required="">
+              id="user_email" placeholder="почта" required>
             <span class="error_text">
               Забавный у вас адрес
             </span>
@@ -669,7 +671,7 @@
               Что нужно привезти:
             </label>
             <input class="modal_form_input product_input focus_element" type="text" name="product" id="product"
-              placeholder="В свободной форме" required="">
+              placeholder="В свободной форме" required>
           </div>
 
           <div class="input_wrapper input_wrapper_amount">
