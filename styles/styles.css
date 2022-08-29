@@ -2257,7 +2257,6 @@ img {
 
 .pagination_item:focus-within {
   outline: #af4fff 2px solid;
-  outline-offset: 2px;
 }
 
 .pagination_link.is_active:hover {
